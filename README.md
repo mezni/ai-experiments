@@ -71,7 +71,7 @@ This project provides APIs for:
 
 ### 📘 Documentation
 
-- [ADR Records](assets/adr.md)
+- [ADR Records](docs/adr.md)
 - [OpenAPI Specs](api.md)
 
 
