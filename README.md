@@ -72,7 +72,7 @@ This project provides APIs for:
 ### 📘 Documentation
 
 - [ADR Records](docs/adr.md)
-- [OpenAPI Specs](api.md)
+- [OpenAPI Specs](docs/api.md)
 
 
 ### 🧑‍💻 Authors
