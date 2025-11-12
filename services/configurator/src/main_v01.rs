@@ -1,5 +1,4 @@
-// main.rs
-use actix_web::{web, App, HttpResponse, HttpServer};
+use actix_web::{App, HttpResponse, HttpServer, Responder, web};
 use chrono::NaiveDateTime;
 use dotenvy::dotenv;
 use serde::{Deserialize, Serialize};
@@ -7,14 +6,10 @@ use sqlx::{PgPool, postgres::PgPoolOptions};
 use std::sync::Arc;
 use std::time::Duration;
 use thiserror::Error;
-use tracing::{error, info};
+use tracing::{error, info, warn};
 use tracing_subscriber::EnvFilter;
 use utoipa::{OpenApi, ToSchema};
 use utoipa_swagger_ui::SwaggerUi;
-
-// Import the middleware module
-mod middleware;
-use middleware::{AuthenticatedUser, require_role};
 
 // === CONSTANTS ===
 const API_PREFIX: &str = "/api/v1";
@@ -46,9 +41,6 @@ pub enum NetworkError {
 
     #[error("Service unavailable: {0}")]
     ServiceUnavailable(String),
-
-    #[error("Authentication error: {0}")]
-    Authentication(String),
 }
 
 impl actix_web::ResponseError for NetworkError {
@@ -68,7 +60,6 @@ impl actix_web::ResponseError for NetworkError {
             NetworkError::ServiceUnavailable(_) => {
                 HttpResponse::ServiceUnavailable().json(self.to_string())
             }
-            NetworkError::Authentication(_) => HttpResponse::Unauthorized().json(self.to_string()),
             NetworkError::Database(e) => {
                 error!("Database error: {}", e);
                 HttpResponse::InternalServerError().json("Database error occurred")
@@ -182,7 +173,7 @@ pub struct Network {
     pub updated_at: NaiveDateTime,
 }
 
-// DTO for creating a network - REMOVE created_by since it comes from auth
+// DTO for creating a network
 #[derive(Debug, Serialize, Deserialize, ToSchema)]
 pub struct NetworkCreate {
     pub name: String,
@@ -191,9 +182,10 @@ pub struct NetworkCreate {
     pub contact_email: Option<String>,
     pub phone_number: Option<String>,
     pub address: Option<String>,
+    pub created_by: String,
 }
 
-// DTO for updating a network - REMOVE updated_by since it comes from auth
+// DTO for updating a network
 #[derive(Debug, Serialize, Deserialize, ToSchema)]
 pub struct NetworkUpdate {
     pub name: String,
@@ -202,6 +194,7 @@ pub struct NetworkUpdate {
     pub contact_email: Option<String>,
     pub phone_number: Option<String>,
     pub address: Option<String>,
+    pub updated_by: String,
 }
 
 // === SERVICE ===
@@ -268,7 +261,7 @@ impl NetworkService {
             .map_err(NetworkError::Database)
     }
 
-    pub async fn create(&self, network: NetworkCreate, username: String) -> Result<Network, NetworkError> {
+    pub async fn create(&self, network: NetworkCreate) -> Result<Network, NetworkError> {
         // Validate network type
         if network.type_ != "individual" && network.type_ != "company" {
             return Err(NetworkError::Validation(
@@ -295,7 +288,7 @@ impl NetworkService {
         .bind(&network.contact_email)
         .bind(&network.phone_number)
         .bind(&network.address)
-        .bind(&username)
+        .bind(&network.created_by)
         .fetch_one(self.get_pool())
         .await;
 
@@ -312,7 +305,6 @@ impl NetworkService {
         &self,
         network_id: i32,
         network: NetworkUpdate,
-        username: String,
     ) -> Result<Network, NetworkError> {
         // Validate network type
         if network.type_ != "individual" && network.type_ != "company" {
@@ -342,7 +334,7 @@ impl NetworkService {
         .bind(&network.contact_email)
         .bind(&network.phone_number)
         .bind(&network.address)
-        .bind(&username)
+        .bind(&network.updated_by)
         .bind(network_id)
         .fetch_one(self.get_pool())
         .await;
@@ -384,6 +376,7 @@ impl NetworkService {
 
 // Simple email validation function
 fn is_valid_email(email: &str) -> bool {
+    // Basic email validation without regex
     let parts: Vec<&str> = email.split('@').collect();
     if parts.len() != 2 {
         return false;
@@ -410,7 +403,7 @@ fn is_valid_email(email: &str) -> bool {
         }
     }
 
-    // Basic character check
+    // Basic character check (you can make this more sophisticated)
     if email.contains(' ') || email.contains("..") {
         return false;
     }
@@ -420,7 +413,7 @@ fn is_valid_email(email: &str) -> bool {
 
 // === HANDLERS ===
 
-// Health check handler (public)
+// Health check handler
 #[utoipa::path(
     get,
     path = "/api/v1/health",
@@ -439,7 +432,7 @@ async fn health_check(service: web::Data<NetworkService>) -> HttpResponse {
     }
 }
 
-// Pool stats handler (public)
+// Pool stats handler
 #[utoipa::path(
     get,
     path = "/api/v1/health/pool",
@@ -458,7 +451,6 @@ async fn pool_stats(service: web::Data<NetworkService>) -> HttpResponse {
     }
 }
 
-// Get all networks (public)
 #[utoipa::path(
     get,
     path = "/api/v1/networks",
@@ -475,7 +467,6 @@ async fn get_all_networks(
     Ok(HttpResponse::Ok().json(networks))
 }
 
-// Get network by ID (public)
 #[utoipa::path(
     get,
     path = "/api/v1/networks/{network_id}",
@@ -500,7 +491,6 @@ async fn get_network_by_id(
     }
 }
 
-// Create network (protected - requires authentication)
 #[utoipa::path(
     post,
     path = "/api/v1/networks",
@@ -508,7 +498,6 @@ async fn get_network_by_id(
     responses(
         (status = 201, description = "Network created", body = Network),
         (status = 400, description = "Validation error"),
-        (status = 401, description = "Unauthorized"),
         (status = 500, description = "Failed to create network")
     ),
     tag = "Network"
@@ -516,19 +505,18 @@ async fn get_network_by_id(
 async fn create_network(
     network: web::Json<NetworkCreate>,
     service: web::Data<NetworkService>,
-    user: AuthenticatedUser,
 ) -> Result<HttpResponse, NetworkError> {
+    // Validate the input data
     if let Some(ref email) = network.contact_email {
         if !is_valid_email(email) {
             return Err(NetworkError::Validation("Invalid email format".to_string()));
         }
     }
 
-    let network = service.create(network.into_inner(), user.username).await?;
+    let network = service.create(network.into_inner()).await?;
     Ok(HttpResponse::Created().json(network))
 }
 
-// Update network (protected - requires authentication)
 #[utoipa::path(
     put,
     path = "/api/v1/networks/{network_id}",
@@ -539,7 +527,6 @@ async fn create_network(
     responses(
         (status = 200, description = "Network updated", body = Network),
         (status = 400, description = "Validation error"),
-        (status = 401, description = "Unauthorized"),
         (status = 404, description = "Network not found"),
         (status = 500, description = "Failed to update network")
     ),
@@ -549,8 +536,8 @@ async fn update_network(
     network_id: web::Path<i32>,
     network: web::Json<NetworkUpdate>,
     service: web::Data<NetworkService>,
-    user: AuthenticatedUser,
 ) -> Result<HttpResponse, NetworkError> {
+    // Validate the input data
     if let Some(ref email) = network.contact_email {
         if !is_valid_email(email) {
             return Err(NetworkError::Validation("Invalid email format".to_string()));
@@ -558,12 +545,11 @@ async fn update_network(
     }
 
     let network = service
-        .update(network_id.into_inner(), network.into_inner(), user.username)
+        .update(network_id.into_inner(), network.into_inner())
         .await?;
     Ok(HttpResponse::Ok().json(network))
 }
 
-// Delete network (protected - requires admin role)
 #[utoipa::path(
     delete,
     path = "/api/v1/networks/{network_id}",
@@ -572,8 +558,6 @@ async fn update_network(
     ),
     responses(
         (status = 204, description = "Network deleted"),
-        (status = 401, description = "Unauthorized"),
-        (status = 403, description = "Forbidden - Admin only"),
         (status = 404, description = "Network not found"),
         (status = 500, description = "Failed to delete network")
     ),
@@ -582,11 +566,7 @@ async fn update_network(
 async fn delete_network(
     network_id: web::Path<i32>,
     service: web::Data<NetworkService>,
-    user: AuthenticatedUser,
 ) -> Result<HttpResponse, NetworkError> {
-    require_role(&user, "admin")
-        .map_err(|e| NetworkError::Authentication(e.to_string()))?;
-
     service.delete(network_id.into_inner()).await?;
     Ok(HttpResponse::NoContent().finish())
 }
@@ -595,13 +575,11 @@ async fn delete_network(
 pub fn config(cfg: &mut web::ServiceConfig) {
     cfg.service(
         web::scope(API_PREFIX)
-            // Public routes
             .route("/health", web::get().to(health_check))
             .route("/health/pool", web::get().to(pool_stats))
             .route("/networks", web::get().to(get_all_networks))
-            .route("/networks/{network_id}", web::get().to(get_network_by_id))
-            // Protected routes (require authentication)
             .route("/networks", web::post().to(create_network))
+            .route("/networks/{network_id}", web::get().to(get_network_by_id))
             .route("/networks/{network_id}", web::put().to(update_network))
             .route("/networks/{network_id}", web::delete().to(delete_network)),
     );
