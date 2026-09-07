@@ -1,0 +1,534 @@
+[
+  {
+    "chunk_id": "billing_invoice_policy_chunk_001",
+    "content": "# Billing & Invoice Policy\n\n## Document Information\n- **Document ID:** AW-BIL-001\n- **Version:** 2.1\n- **Last Updated:** August 2026\n- **Department:** Finance Operations\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nThis policy governs how monthly invoices are generated, when autopay applies, how balances are treated, and the customer's rights regarding billing disputes.\n\n## Invoice Cycle\n\n- Invoices are issued monthly with a **15-day due window**.\n- Invoice includes: plan charge, taxes & fees, add-ons, device installments, and any applicable credits.\n- Invoices are available digitally (Aether Wireless app/portal) and sent by email.\n- Paper invoices are available upon request ($2/month fee).\n\n---\n\n## Charges on Invoice\n\n| Line Item | Description |\n|-----------|-------------|\n| Monthly Rate Plan | Base plan price (e.g., Standard $60) |\n| Regulatory Taxes & Fees | Taxes and surcharges (~8–12% depending on jurisdiction) |\n| Data / Talk Add-ons | One-time purchases |\n| Device Installme",
+    "document_id": "billing_invoice_policy",
+    "source": "billing_invoice_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "billing_invoice_policy_chunk_002",
+    "content": "(~8–12% depending on jurisdiction) |\n| Data / Talk Add-ons | One-time purchases |\n| Device Installment | Monthly device payment |\n| Protection Plan | Device protection monthly fee |\n| Service Fees | Late fees, chargeback fees, returned payment fees |\n| Promotional Credits | Applied discounts (shown as negative) |\n\n---\n\n## Autopay\n\n- Autopay is enabled by default (78% of accounts).\n- **Autopay discount:** $5/month on Premium, Unlimited, and Business plans.\n- Payment methods accepted: credit card, debit card, ACH (bank account).\n- Failed autopay attempts: 2 retries over 5 business days.\n- After 2 failed attempts, a $5 retry fee is charged.\n- Customers are notified of failed payments via SMS and email.\n\n---\n\n## Account Status\n\n| Account Status | Definition |\n|----------------|------------|\n| Active | No balance older than 30 days |\n| Past Due | Balance 15–30 days outstanding |\n| Delinquent | Balance outstanding > 30 days |\n| Suspended | No service; balance > 45 days |\n| Prospect | No acti",
+    "document_id": "billing_invoice_policy",
+    "source": "billing_invoice_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "billing_invoice_policy_chunk_003",
+    "content": "| Balance outstanding > 30 days |\n| Suspended | No service; balance > 45 days |\n| Prospect | No active billing account yet |\n| Closed | Account terminated; final balance settled |\n\n- Current balance carries to next invoice if unpaid.\n- Service suspension at 45 days past due.\n- Account closure after 90 days past due; remaining balance sent to collections.\n\n---\n\n## Late Fees & Penalties\n\n| Fee Type | Amount | Trigger |\n|----------|--------|---------|\n| Late payment fee | $10 | Payment received after 15-day window |\n| Returned payment fee | $25 | ACH or card payment returned |\n| Chargeback fee | $35 | Customer-initiated chargeback |\n| Paper invoice fee | $2/month | Opted into paper billing |\n\n---\n\n## Bill Optimization\n\nThe Aether Wireless system performs automated bill optimization reviews:\n\n- Usage < 60% of allowance for 2 consecutive cycles → recommend downgrade.\n- Multiple single lines on an account → recommend Family plan.\n- Autopay not active → encourage enrollment for $5/month disco",
+    "document_id": "billing_invoice_policy",
+    "source": "billing_invoice_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "billing_invoice_policy_chunk_004",
+    "content": "n an account → recommend Family plan.\n- Autopay not active → encourage enrollment for $5/month discount.\n- Unused add-ons detected → recommend removal.\n\nOptimization recommendations are sent via SMS and available in the app.\n\n---\n\n## Disputes\n\n- Disputes must be filed within **60 days** of invoice date.\n- Credit is provided for validated billing errors within 5 business days.\n- Disputed amounts are held during review (no late fee accrues).\n- Customers receive a case number and estimated resolution timeline.\n\n---\n\n## FAQs\n\n**Q: Why is my total higher than my plan price?**\nA: Total includes taxes, fees, add-ons, protection plan, and device installments.\n\n**Q: Can I change my billing date?**\nA: Billing dates are fixed by account creation; changes require manager approval and may take one cycle.\n\n**Q: How do I get a copy of an old invoice?**\nA: Available digitally for the last 24 months in the Aether Wireless app or portal.\n\n**Q: Is there a discount for annual payment?**\nA: Yes, customers ",
+    "document_id": "billing_invoice_policy",
+    "source": "billing_invoice_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "billing_invoice_policy_chunk_005",
+    "content": "he Aether Wireless app or portal.\n\n**Q: Is there a discount for annual payment?**\nA: Yes, customers who prepay 12 months receive a 10% discount on the plan charge.\n\n---\n\n**Contact Billing:**\n- Billing Helpline: 1-833-AETHER-BILL\n- Email: billing@aetherwireless.com\n\n*Billing terms apply. Taxes vary by jurisdiction.*\n",
+    "document_id": "billing_invoice_policy",
+    "source": "billing_invoice_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "data_plan_terms_conditions_chunk_001",
+    "content": "# Data Plan Terms & Conditions\n\n## Document Information\n- **Document ID:** AW-PLN-003\n- **Version:** 3.1\n- **Last Updated:** June 2026\n- **Department:** Legal & Compliance\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nThese terms govern all data allowances, speeds, add-ons, and network management policies across all Aether Wireless postpaid and prepaid plans. They form part of the subscriber agreement.\n\n## Fair Usage Policy\n\n- Data allowances are for personal, non-commercial use.\n- Unlimited plans are subject to network management during congestion.\n- Automated downloading, torrenting beyond stated limits, tethering beyond plan allowances, and reselling are prohibited.\n- Aether Wireless reserves the right to throttle or suspend accounts engaged in abusive usage.\n\n---\n\n## Speed & Throttling\n\n| Condition | Result |\n|-----------|--------|\n| Allowance exhausted (Essential/Standard) | Throttled to 128 kbps / 256 kbps respectively |\n| Allowance exhausted (Premium/Unlimited) | Throttled t",
+    "document_id": "data_plan_terms_conditions",
+    "source": "data_plan_terms_conditions.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "data_plan_terms_conditions_chunk_002",
+    "content": "ottled to 128 kbps / 256 kbps respectively |\n| Allowance exhausted (Premium/Unlimited) | Throttled to 512 kbps |\n| Congestion (Unlimited) | Prioritized below postpaid Essentials |\n| International roaming data | Speed reduced to 3G/4G as per destination network |\n| Tethering beyond hotspot allowance | Throttled to 64 kbps |\n| Business plan | Throttled to 1 Mbps after 200 GB |\n\n---\n\n## Data Add-ons\n\n- **Data Boost 1 GB:** $10 — valid for current billing cycle.\n- **Data Boost 5 GB:** $35 — valid for current billing cycle.\n- **International Roaming Pass:** $15/day — 500 MB + unlimited calls in destination.\n- **Tethering Boost 10 GB:** $12 — for Essential and Standard plans.\n- Add-on data does not roll over to the next cycle.\n- Add-on charges are billed in the next invoice.\n- Customers can purchase add-ons via app, website, or in-store.\n\n---\n\n## Roaming Data Terms\n\n- Roaming is available in 180+ countries.\n- Speeds depend on partner network availability.\n- Data roaming is disabled by defaul",
+    "document_id": "data_plan_terms_conditions",
+    "source": "data_plan_terms_conditions.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "data_plan_terms_conditions_chunk_003",
+    "content": "80+ countries.\n- Speeds depend on partner network availability.\n- Data roaming is disabled by default; must be enabled in account settings.\n- Roaming charges apply at published rates unless a Roaming Pass is active.\n\n---\n\n## Bill Optimization Guidance\n\nCustomers seeking to reduce monthly bills should consider:\n\n1. Moving to a lower tier if 60-day average usage < 60% of allowance.\n2. Enabling autopay for a $5/month recurring discount.\n3. Consolidating multiple lines onto a Family plan.\n4. Using Wi-Fi calling to reduce talk-minute usage.\n5. Removing unused add-ons from the account.\n\n---\n\n## Compliance Notes\n\n- All terms are part of the Aether Wireless subscriber agreement.\n- Changes to terms require 30 days written notice.\n- Customers may terminate without penalty upon material term changes.\n- Aether Wireless complies with FCC network management disclosure requirements.\n\n---\n\n## Dispute Resolution\n\n- Data quality complaints must be reported within 30 days.\n- Aether Wireless investigates ",
+    "document_id": "data_plan_terms_conditions",
+    "source": "data_plan_terms_conditions.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "data_plan_terms_conditions_chunk_004",
+    "content": "solution\n\n- Data quality complaints must be reported within 30 days.\n- Aether Wireless investigates within 5 business days.\n- Credits are issued for verified network quality issues.\n- Customers may escalate to the FCC if unresolved after 60 days.\n\n---\n\n**Contact Legal:**\n- Email: legal@aetherwireless.com\n- Regulatory Affairs: regulatory@aetherwireless.com\n\n*Terms subject to regulatory change.*\n",
+    "document_id": "data_plan_terms_conditions",
+    "source": "data_plan_terms_conditions.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_protection_policy_chunk_001",
+    "content": "# Device Protection Policy\n\n## Document Information\n- **Document ID:** AW-DEV-003\n- **Version:** 2.0\n- **Last Updated:** July 2026\n- **Department:** Device Services\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nAether Wireless Device Protection covers accidental damage, loss, theft, and extended warranty. This policy describes plan tiers, coverage details, claims, and deductibles.\n\n## Coverage Tiers\n\n### Tier 1 — Screen Repair\n- Front and rear screen replacement.\n- Monthly cost: $5/month.\n- Deductible: $29 per claim.\n- Covers one screen repair per 12 months.\n\n### Tier 2 — Full Protection\n- Accidental damage (drops, spills).\n- Liquid damage (submersion up to 30 minutes).\n- Mechanical breakdown (after manufacturer warranty expires).\n- Monthly cost: $12/month.\n- Deductible: $99 per claim.\n- Covers the full device value up to $1,500.\n\n### Tier 3 — Loss & Theft\n- Includes all Tier 2 coverage.\n- Loss and theft replacement (device or cash payout).\n- Monthly cost: $16/month.\n- Deductible: ",
+    "document_id": "device_protection_policy",
+    "source": "device_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_protection_policy_chunk_002",
+    "content": "age.\n- Loss and theft replacement (device or cash payout).\n- Monthly cost: $16/month.\n- Deductible: $199 per claim.\n- Replacement device ships within 24 hours; arrives in 1–3 business days.\n\n### Tier 4 — Premium Care\n- Includes all Tier 3 coverage.\n- Deductible waived for first claim.\n- $0 deductible for screen repairs.\n- Covers accessories up to $200.\n- Monthly cost: $22/month.\n\n---\n\n## Claim Process\n\n1. Customer reports incident via app, website, or in-store.\n2. Representative verifies coverage tier and account status.\n3. Deductible is quoted and collected (if applicable).\n4. Replacement device is authorized within 24 hours.\n5. Replacement ships in 1–3 business days.\n6. Customer has 14 days to return the damaged/lost device (if found).\n7. Claim is closed upon receipt of replacement.\n\n---\n\n## Claim Limits\n\n| Tier | Claims per 12 Months | Notes |\n|------|---------------------|-------|\n| Tier 1 (Screen) | 2 | Does not count against Tier 2/3 |\n| Tier 2 (Full) | 2 | $99 deductible each |\n",
+    "document_id": "device_protection_policy",
+    "source": "device_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_protection_policy_chunk_003",
+    "content": "Tier 1 (Screen) | 2 | Does not count against Tier 2/3 |\n| Tier 2 (Full) | 2 | $99 deductible each |\n| Tier 3 (Loss & Theft) | 2 | $199 deductible each |\n| Tier 4 (Premium) | 3 | $0 first screen, $99 thereafter |\n\n---\n\n## Deductible Summary\n\n| Tier | Screen | Accidental | Loss/Theft |\n|------|--------|------------|------------|\n| Tier 1 | $29 | N/A | N/A |\n| Tier 2 | $99 | $99 | N/A |\n| Tier 3 | $99 | $99 | $199 |\n| Tier 4 | $0 | $99 | $199 |\n\n---\n\n## Activation & Cancellation\n\n- Protection can be added within **30 days** of device purchase.\n- Protection can be added or removed at any time during device ownership.\n- Removal is effective at the end of the current billing cycle.\n- Refund for the current month is not provided upon cancellation.\n\n---\n\n## Extended Manufacturer Warranty\n\n- Tier 2+ includes an additional 12 months beyond manufacturer warranty.\n- Covers mechanical breakdown only (not accidental damage).\n- No additional deductible for warranty claims.\n\n---\n\n## Exclusions\n\n- Cosm",
+    "document_id": "device_protection_policy",
+    "source": "device_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_protection_policy_chunk_004",
+    "content": "(not accidental damage).\n- No additional deductible for warranty claims.\n\n---\n\n## Exclusions\n\n- Cosmetic wear and tear (scratches, dents without functional damage).\n- Devices purchased more than 30 days before coverage start (no retroactive coverage).\n- Pre-existing damage at coverage purchase.\n- Removal of activation lock cases.\n- Loss/theft claims without a police report (required within 7 days).\n- Devices not owned by the account holder.\n\n---\n\n## FAQs\n\n**Q: Can I add protection after buying my phone?**\nA: Yes, within 30 days of purchase.\n\n**Q: What if my phone is lost while traveling?**\nA: Loss & Theft tier covers worldwide; a police report is required.\n\n**Q: How many claims can I file?**\nA: Up to 2–3 per rolling 12 months depending on your tier.\n\n**Q: Does my protection transfer if I upgrade?**\nA: Yes, protection transfers to the new device automatically.\n\n**Q: What if my replacement is refurbished?**\nA: Aether Wireless provides like-new or certified refurbished devices. All replac",
+    "document_id": "device_protection_policy",
+    "source": "device_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_protection_policy_chunk_005",
+    "content": " is refurbished?**\nA: Aether Wireless provides like-new or certified refurbished devices. All replacements come with a 12-month warranty.\n\n---\n\n**Contact Device Services:**\n- Protection Claims: 1-833-AETHER-CARE\n- Email: protection@aetherwireless.com\n\n*Deductibles and limits subject to change. See terms for full details.*\n",
+    "document_id": "device_protection_policy",
+    "source": "device_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_trade_in_process_chunk_001",
+    "content": "# Device Trade-In Process\n\n## Document Information\n- **Document ID:** AW-DEV-002\n- **Version:** 2.3\n- **Last Updated:** July 2026\n- **Department:** Device Finance\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nThe Aether Wireless trade-in program credits customers for their current device toward a new purchase. This process document details assessment, valuation, credit application, and device handling.\n\n## Eligibility\n\n- Original device must be owned by the account holder.\n- Device must power on and hold a charge for valuation.\n- Account must be Active (see Plan Upgrade Policy).\n- Device must not be reported lost or stolen.\n\n---\n\n## Valuation Factors\n\n| Factor | Influence |\n|--------|-----------|\n| Make & model | Base value table (updated quarterly) |\n| Age | Depreciation over time (12–15% per year) |\n| Screen condition | Cracks reduce value 30–50% |\n| Battery health | < 80% capacity reduces value 10–20% |\n| Activation lock | Must be removed before valuation |\n| Water damage indica",
+    "document_id": "device_trade_in_process",
+    "source": "device_trade_in_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_trade_in_process_chunk_002",
+    "content": " reduces value 10–20% |\n| Activation lock | Must be removed before valuation |\n| Water damage indicators | Reduces value 40–60% |\n| Physical damage (frame, buttons) | Reduces value 15–30% |\n| Accessories | Charger/box increase value by $10–20 |\n| Software status | Jailbroken/rooted devices reduce value 20% |\n\n---\n\n## Valuation Tiers\n\n| Tier | Condition | Description |\n|------|-----------|-------------|\n| A | Like New | No scratches, full battery, all accessories |\n| B | Good | Minor wear, 80%+ battery, functional |\n| C | Fair | Visible scratches, 70%+ battery, functional |\n| D | Poor | Cracks, 60%+ battery, functional |\n| E | Broken | Screen/non-functional, powers on |\n| F | Non-functional | Does not power on |\n\n---\n\n## Trade-In Steps\n\n1. Customer selects new device and opts into trade-in.\n2. Representative runs device diagnostics (screen, battery, IMEI check).\n3. System quotes trade-in value instantly based on valuation tier.\n4. Customer accepts or declines the quote.\n5. If accepted, ",
+    "document_id": "device_trade_in_process",
+    "source": "device_trade_in_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_trade_in_process_chunk_003",
+    "content": "value instantly based on valuation tier.\n4. Customer accepts or declines the quote.\n5. If accepted, trade-in credit is applied immediately to the new device purchase.\n6. Old device is collected in-store or shipped via prepaid label (7-day window).\n7. Device is sent to Aether Wireless refurbishment facility for final inspection.\n8. If inspection confirms quoted condition, credit is finalized.\n9. If condition differs from quote, customer is billed/credited the difference.\n\n---\n\n## Promotion Stacking\n\n| Combination | Allowed |\n|-------------|---------|\n| Trade-in credit + Device promo (PROMO-0003) | Yes ($200 bonus) |\n| Trade-in credit + Plan promo | Yes |\n| Trade-in credit + Two device promos | No |\n| Trade-in credit + Cash discount | Yes |\n\n---\n\n## Device Handling After Trade-In\n\n- Devices in Tiers A–C are refurbished and resold.\n- Devices in Tiers D–E are refurbished or recycled.\n- Devices in Tier F are responsibly recycled.\n- All data is wiped per NIST 800-88 standards.\n\n---\n\n## FAQs\n",
+    "document_id": "device_trade_in_process",
+    "source": "device_trade_in_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_trade_in_process_chunk_004",
+    "content": "es in Tier F are responsibly recycled.\n- All data is wiped per NIST 800-88 standards.\n\n---\n\n## FAQs\n\n**Q: Will I get a box to ship my phone?**\nA: Yes, a prepaid shipping kit is provided in-store or by mail.\n\n**Q: What if my phone has a cracked screen?**\nA: It is still eligible; value is reduced to Tier D or E depending on damage.\n\n**Q: When is my credit applied?**\nA: Instantly at point of sale, subject to inspection confirmation.\n\n**Q: Can I trade in a device without buying a new one?**\nA: No, trade-in credits are applied toward a new device purchase only.\n\n**Q: What happens to my data?**\nA: Factory reset is recommended before trade-in. Aether Wireless performs NIST-compliant data wiping at the refurbishment facility.\n\n---\n\n**Contact Device Team:**\n- Email: devices@aetherwireless.com\n\n*Valuations subject to physical inspection. Values valid for 14 days from quote.*\n",
+    "document_id": "device_trade_in_process",
+    "source": "device_trade_in_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_upgrade_guidelines_chunk_001",
+    "content": "# Device Upgrade Guidelines\n\n## Document Information\n- **Document ID:** AW-DEV-001\n- **Version:** 2.0\n- **Last Updated:** August 2026\n- **Department:** Device Finance\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nDevice upgrades allow customers to move to a newer handset, typically with trade-in credit, installment financing, or promotional pricing. This document covers eligibility, timing, financing options, and the upgrade workflow.\n\n## Upgrade Eligibility\n\n- Device must be on the account for at least **12 months** (or 50% of installment term).\n- No more than **2 unpaid installments** on the current device.\n- Account status: Active (see Plan Upgrade Policy for status rules).\n- Customer must not have exceeded device financing limits (see below).\n\n### Device Financing Limits\n\n| Credit Tier | Max Devices Financed | Max Monthly Financing |\n|-------------|----------------------|----------------------|\n| Tier A (Excellent) | 4 | $200/month total |\n| Tier B (Good) | 3 | $150/month total",
+    "document_id": "device_upgrade_guidelines",
+    "source": "device_upgrade_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_upgrade_guidelines_chunk_002",
+    "content": "--------------|\n| Tier A (Excellent) | 4 | $200/month total |\n| Tier B (Good) | 3 | $150/month total |\n| Tier C (Fair) | 2 | $100/month total |\n\n### Early Upgrade Options\n\n| Situation | Option |\n|-----------|--------|\n| 12+ months on device | Standard upgrade with trade-in |\n| Device damaged | Device protection claim, then upgrade |\n| Device lost/stolen | Protection plan payout, then upgrade |\n| < 12 months | Pay remaining balance, then upgrade |\n\n---\n\n## Available Devices\n\n| Device | Retail Price | Term | Est. /month | Plan Required |\n|--------|--------------|------|-------------|---------------|\n| iPhone 16 | $899 | 24 mo | $37.46 | Essential+ |\n| iPhone 16 Pro | $1,199 | 24 mo | $49.96 | Standard+ |\n| Samsung Galaxy S25 | $899 | 24 mo | $37.46 | Essential+ |\n| Samsung Galaxy S25 Ultra | $1,299 | 24 mo | $54.12 | Standard+ |\n| Google Pixel 9 | $799 | 24 mo | $33.29 | Essential+ |\n| Google Pixel 9 Pro | $999 | 24 mo | $41.63 | Standard+ |\n| OnePlus 12 | $699 | 24 mo | $29.13 | Essenti",
+    "document_id": "device_upgrade_guidelines",
+    "source": "device_upgrade_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_upgrade_guidelines_chunk_003",
+    "content": "gle Pixel 9 Pro | $999 | 24 mo | $41.63 | Standard+ |\n| OnePlus 12 | $699 | 24 mo | $29.13 | Essential+ |\n| Motorola Edge 50 | $599 | 24 mo | $24.96 | Essential+ |\n\n- 0% APR when device is financed on a Premium, Unlimited, or Business plan.\n- 6.99% APR on Essential and Standard plans.\n- Down payment may be required for Tier C credit customers.\n\n---\n\n## Trade-In Value Estimates\n\nSee `device_trade_in_process.md` for the full trade-in procedure.\n\n| Device Category | Age | Typical Value Range |\n|-----------------|-----|---------------------|\n| Flagship phones | < 2 years | 40–60% of original retail |\n| Mid-range phones | < 3 years | 25–40% of original retail |\n| Budget phones | < 2 years | 15–25% of original retail |\n| Damaged devices | Any | 10–30% (screen cracks, water damage) |\n\n---\n\n## Upgrade Process\n\n1. Confirm account status and installment eligibility.\n2. System runs 60-day usage analysis to recommend target device.\n3. Representative presents device options and financing terms.\n4. ",
+    "document_id": "device_upgrade_guidelines",
+    "source": "device_upgrade_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_upgrade_guidelines_chunk_004",
+    "content": "lysis to recommend target device.\n3. Representative presents device options and financing terms.\n4. Customer selects device; trade-in is processed if applicable.\n5. New installment agreement is signed.\n6. Device is activated in-store or shipped within 2 business days.\n7. Old device is collected (in-store) or shipped via prepaid label (7-day window).\n8. Customer receives activation confirmation SMS.\n\n---\n\n## Device Insurance During Upgrade\n\n- Device protection transfers to the new device automatically.\n- No gap in coverage between old and new device.\n- Deductible amounts remain the same unless plan tier changes.\n\n---\n\n## FAQs\n\n**Q: Can I pay off my device early?**\nA: Yes, full balance can be paid at any time. Promotional credits may be forfeited if paid off before the promo term.\n\n**Q: Can I transfer my device to another line?**\nA: Yes, if both lines are on the same account.\n\n**Q: Do I keep my old number on upgrade?**\nA: Yes, number and plan remain unchanged.\n\n**Q: What if my device is ",
+    "document_id": "device_upgrade_guidelines",
+    "source": "device_upgrade_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "device_upgrade_guidelines_chunk_005",
+    "content": "ep my old number on upgrade?**\nA: Yes, number and plan remain unchanged.\n\n**Q: What if my device is not in working condition?**\nA: Trade-in value will be reduced. Consider filing a protection claim first.\n\n**Q: Can I upgrade multiple lines at once?**\nA: Yes, each line is evaluated independently.\n\n---\n\n**Contact Device Team:**\n- Device Helpline: 1-833-AETHER-DEV\n- Email: devices@aetherwireless.com\n\n*Terms and conditions apply.*\n",
+    "document_id": "device_upgrade_guidelines",
+    "source": "device_upgrade_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "international_roaming_policy_chunk_001",
+    "content": "# International Roaming Policy\n\n## Document Information\n- **Document ID:** AW-SRV-004\n- **Version:** 1.2\n- **Last Updated:** August 2026\n- **Department:** Carrier Services\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nAether Wireless provides international roaming services in 180+ countries. This policy covers roaming passes, rates, data management, and troubleshooting.\n\n## Roaming Passes\n\n| Pass | Price | Data | Calls | SMS | Validity |\n|------|-------|------|-------|-----|----------|\n| Day Pass | $15/day | 500 MB high-speed | Unlimited in-country | Unlimited in-country | 24 hours |\n| Weekly Pass | $50/week | 3 GB high-speed | Unlimited in-country | Unlimited in-country | 7 days |\n| Monthly Pass | $120/month | 10 GB high-speed | Unlimited in-country + US | Unlimited | 30 days |\n| Cruise Pass | $10/day | 200 MB | $1.50/min | $0.50/day | 24 hours |\n\n---\n\n## Pay-Per-Use Rates (Without Pass)\n\n| Service | Rate |\n|---------|------|\n| Data | $2/MB |\n| Calls received | $1.50/minute |\n| Ca",
+    "document_id": "international_roaming_policy",
+    "source": "international_roaming_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "international_roaming_policy_chunk_002",
+    "content": "Pass)\n\n| Service | Rate |\n|---------|------|\n| Data | $2/MB |\n| Calls received | $1.50/minute |\n| Calls made | $2.00/minute |\n| SMS sent | $0.50/message |\n| SMS received | Free |\n| MMS | $1.00/message |\n\n---\n\n## Coverage Regions\n\n| Region | Countries | Network Partners |\n|--------|-----------|-----------------|\n| North America | US, Canada, Mexico | Rogers, Telcel, Bell |\n| Europe | 35+ countries | Vodafone, Orange, Deutsche Telekom |\n| Asia-Pacific | 25+ countries | SoftBank, Singtel, Optus |\n| Latin America | 20+ countries | Claro, Entel, Movistar |\n| Africa | 15+ countries | MTN, Vodacom, Safaricom |\n| Middle East | 10+ countries | Etisalat, STC, Zain |\n\n---\n\n## Roaming Activation\n\n- Roaming is disabled by default for security.\n- Enable via: Aether Wireless app → Settings → International Roaming.\n- Enable via: aetherwireless.com → Account → Roaming Settings.\n- Enable via: Call 1-833-AETHER-INTL.\n- Activation is instant; no reboot required.\n\n---\n\n## Data Management While Roaming\n\n- R",
+    "document_id": "international_roaming_policy",
+    "source": "international_roaming_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "international_roaming_policy_chunk_003",
+    "content": "ETHER-INTL.\n- Activation is instant; no reboot required.\n\n---\n\n## Data Management While Roaming\n\n- Real-time data usage notifications at 50%, 80%, and 100% of pass allowance.\n- Auto-purchase of additional day pass if data is exhausted.\n- Customers can set data roaming limits in the app.\n- Data saver mode recommended: disables background app refresh.\n\n---\n\n## Troubleshooting\n\n| Issue | Resolution |\n|-------|------------|\n| No service abroad | Toggle airplane mode; wait 5 minutes |\n| Can't make calls | Check roaming is enabled; verify pass is active |\n| Slow data | Network congestion; try switching to 3G/4G |\n| Unexpected charges | Review pass activation date; contact support |\n\n---\n\n## FAQs\n\n**Q: Do I need to activate roaming before travel?**\nA: Yes, enable roaming in the app at least 24 hours before departure.\n\n**Q: Will I be charged if I don't use my phone abroad?**\nA: No charges unless you make/receive calls, send SMS, or use data.\n\n**Q: Can I use my domestic data allowance abroad?**",
+    "document_id": "international_roaming_policy",
+    "source": "international_roaming_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "international_roaming_policy_chunk_004",
+    "content": " you make/receive calls, send SMS, or use data.\n\n**Q: Can I use my domestic data allowance abroad?**\nA: Only with the Monthly Pass. Day and Weekly passes have separate allowances.\n\n---\n\n**Contact Carrier Services:**\n- International Support: 1-833-AETHER-INTL\n- Email: roaming@aetherwireless.com\n\n*Rates subject to change. See partner network terms for details.*\n",
+    "document_id": "international_roaming_policy",
+    "source": "international_roaming_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "loyalty_rewards_program_chunk_001",
+    "content": "# Loyalty & Rewards Program\n\n## Document Information\n- **Document ID:** AW-PRO-002\n- **Version:** 1.0\n- **Last Updated:** August 2026\n- **Department:** Marketing Operations\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nAether Rewards is the loyalty program for Aether Wireless customers. Members earn points on eligible purchases and monthly service charges, redeemable for discounts, devices, and experiences.\n\n## Membership Tiers\n\n| Tier | Points Required | Benefits |\n|------|-----------------|----------|\n| Silver | 0 (auto-enrolled) | 1 point per $1 spent, basic rewards |\n| Gold | 5,000 points | 1.5 points per $1, priority support, early access to deals |\n| Platinum | 15,000 points | 2 points per $1, free device upgrade once/year, concierge support |\n| Diamond | 30,000 points | 2.5 points per $1, exclusive events, annual gift |\n\n---\n\n## Earning Points\n\n| Activity | Points Earned |\n|----------|---------------|\n| Monthly service charge | 1 point per $1 |\n| Device purchase | 2 points p",
+    "document_id": "loyalty_rewards_program",
+    "source": "loyalty_rewards_program.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "loyalty_rewards_program_chunk_002",
+    "content": "--------|---------------|\n| Monthly service charge | 1 point per $1 |\n| Device purchase | 2 points per $1 |\n| Accessory purchase | 1 point per $1 |\n| Referring a new customer | 500 bonus points |\n| On-time payment (12 months) | 200 bonus points |\n| Enrolling in autopay | 100 bonus points |\n| Completing a survey | 50 points |\n| Birthday bonus | 200 points |\n\n---\n\n## Redemption\n\n| Reward | Points Required |\n|--------|-----------------|\n| $5 account credit | 500 points |\n| $10 account credit | 1,000 points |\n| Free accessory (up to $50 value) | 2,500 points |\n| $100 device credit | 5,000 points |\n| Free month of service | 7,500 points |\n| Device upgrade discount (up to $500) | 15,000 points |\n| Exclusive event access | 10,000 points |\n\n---\n\n## Point Expiration\n\n- Points expire after **24 months** of account inactivity.\n- Account inactivity = no earning or redemption activity.\n- Expiration reminders sent 60 and 30 days before expiry.\n- Tier status resets annually based on 12-month rolling ",
+    "document_id": "loyalty_rewards_program",
+    "source": "loyalty_rewards_program.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "loyalty_rewards_program_chunk_003",
+    "content": "eminders sent 60 and 30 days before expiry.\n- Tier status resets annually based on 12-month rolling point total.\n\n---\n\n## Terms & Conditions\n\n- Points have no cash value and cannot be transferred.\n- Aether Wireless reserves the right to modify the rewards program.\n- Fraudulent point accumulation results in account suspension.\n- Points earned during promotional periods are subject to promotional terms.\n- Rewards are subject to availability.\n\n---\n\n## FAQs\n\n**Q: How do I check my points balance?**\nA: Via the Aether Wireless app → Rewards tab, or call 1-833-AETHER-REW.\n\n**Q: Can I use points to pay my bill?**\nA: Yes, redeem for account credits applied to your next invoice.\n\n**Q: Do points transfer if I change my number?**\nA: Yes, points are tied to your account, not your number.\n\n---\n\n**Contact Rewards:**\n- Email: rewards@aetherwireless.com\n\n*Aether Rewards program terms apply.*\n",
+    "document_id": "loyalty_rewards_program",
+    "source": "loyalty_rewards_program.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "network_service_level_agreement_chunk_001",
+    "content": "# Network Service Level Agreement\n\n## Document Information\n- **Document ID:** AW-NET-001\n- **Version:** 1.1\n- **Last Updated:** July 2026\n- **Department:** Network Operations\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nThis document defines Aether Wireless's network performance commitments, service level targets, and remedies for customers affected by outages or degradation.\n\n## Network Uptime Commitment\n\n| Metric | Target | Measurement |\n|--------|--------|-------------|\n| Network availability | 99.9% monthly | Excluding scheduled maintenance |\n| Voice call completion rate | 99.5% | Per 1,000 call attempts |\n| SMS delivery rate | 99.9% | Per 1,000 messages |\n| Data session success rate | 99.5% | Per 1,000 data session attempts |\n| 4G/5G coverage | 98% of service area | Population-weighted |\n\n---\n\n## Scheduled Maintenance\n\n- Maintenance windows: 2:00 AM – 6:00 AM local time.\n- Customers notified 72 hours in advance via SMS and email.\n- No more than 4 maintenance windows per month",
+    "document_id": "network_service_level_agreement",
+    "source": "network_service_level_agreement.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "network_service_level_agreement_chunk_002",
+    "content": "omers notified 72 hours in advance via SMS and email.\n- No more than 4 maintenance windows per month.\n- Emergency maintenance exempt from notification requirement.\n\n---\n\n## Outage Response\n\n| Severity | Definition | Response Time | Resolution Target |\n|----------|-----------|---------------|-------------------|\n| Critical | Complete service loss in major metro area | 15 minutes | 4 hours |\n| Major | Service degradation in metro area | 30 minutes | 8 hours |\n| Moderate | Localized outage (< 10,000 users) | 1 hour | 12 hours |\n| Minor | Single-site or edge issue | 4 hours | 24 hours |\n\n---\n\n## Service Credits\n\nCustomers may be eligible for service credits when network SLA targets are not met:\n\n| Outage Duration | Credit Amount |\n|-----------------|---------------|\n| 2–4 hours | $5 account credit |\n| 4–8 hours | $10 account credit |\n| 8–24 hours | $20 account credit |\n| 24+ hours | $50 account credit + prorated daily plan charge |\n\n- Credits are applied automatically for outages > 4 hours",
+    "document_id": "network_service_level_agreement",
+    "source": "network_service_level_agreement.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "network_service_level_agreement_chunk_003",
+    "content": "unt credit + prorated daily plan charge |\n\n- Credits are applied automatically for outages > 4 hours.\n- Customers may request credit for shorter outages via Customer Care.\n- Credits are limited to one per event per line.\n\n---\n\n## Coverage & Speed Guarantees\n\n| Metric | Target |\n|--------|--------|\n| Average download speed | 25 Mbps (4G), 100 Mbps (5G) |\n| Average upload speed | 10 Mbps (4G), 20 Mbps (5G) |\n| Latency | < 50ms (4G), < 20ms (5G) |\n| Coverage map accuracy | 95% of marked areas |\n\n---\n\n## Performance Reporting\n\n- Monthly network performance reports available at aetherwireless.com/network.\n- Real-time outage map at aetherwireless.com/status.\n- Network quality data shared quarterly with regulatory bodies.\n\n---\n\n## FAQs\n\n**Q: How do I report a network issue?**\nA: Via the app (Settings → Report Issue), online, or by calling 1-833-AETHER-NET.\n\n**Q: Will I be credited for every outage?**\nA: Credits apply for outages > 4 hours. Shorter outages may qualify upon request.\n\n**Q: How a",
+    "document_id": "network_service_level_agreement",
+    "source": "network_service_level_agreement.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "network_service_level_agreement_chunk_004",
+    "content": "age?**\nA: Credits apply for outages > 4 hours. Shorter outages may qualify upon request.\n\n**Q: How accurate is the coverage map?**\nA: Coverage maps are updated quarterly and reflect 95% of actual coverage areas.\n\n---\n\n**Contact Network Operations:**\n- Network Support: 1-833-AETHER-NET\n- Email: network@aetherwireless.com\n\n*Service level commitments subject to force majeure events.*\n",
+    "document_id": "network_service_level_agreement",
+    "source": "network_service_level_agreement.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "new_line_activation_process_chunk_001",
+    "content": "# New Line Activation Process\n\n## Document Information\n- **Document ID:** AW-SRV-002\n- **Version:** 2.0\n- **Last Updated:** July 2026\n- **Department:** Retail Operations\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nThis document covers the end-to-end process for activating a new line at Aether Wireless, including identity verification, credit checks, SIM/eSIM provisioning, and first-bill expectations.\n\n## Pre-Approval Steps\n\n1. Verify identity with two valid documents (ID + address proof).\n2. Run credit check if financing a device.\n3. Confirm customer consent for KYC data storage.\n4. Select plan and device (or bring-your-own-device).\n5. Review and accept Aether Wireless Terms of Service.\n6. Collect activation fee (if applicable).\n\n---\n\n## Identity Verification\n\n| Requirement | Accepted Documents | Validity |\n|-------------|-------------------|----------|\n| Identity | Passport, driver license, national ID, military ID | Must be current/valid |\n| Address | Utility bill, bank stateme",
+    "document_id": "new_line_activation_process",
+    "source": "new_line_activation_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "new_line_activation_process_chunk_002",
+    "content": "r license, national ID, military ID | Must be current/valid |\n| Address | Utility bill, bank statement, lease agreement | Within 90 days |\n| In-store biometric | Fingerprint or facial scan (optional) | Immediate |\n| Online activation | Video verification or uploaded ID scan | Processed within 1 hour |\n\n---\n\n## Credit Check\n\n| Transaction | Credit Check Type | Impact |\n|-------------|-------------------|--------|\n| New line (BYOD) | Soft pull | No score impact |\n| New line (with device) | Hard pull | Temporary score impact |\n| New line (prepaid) | None | N/A |\n\n- Credit results are valid for 30 days.\n- Customers with limited credit may be required to pay a deposit ($100–$500).\n- Credit tier determines device financing limits (see Device Upgrade Guidelines).\n\n---\n\n## SIM / eSIM Provisioning\n\n### Physical SIM\n- In-store: Instant provisioning from Aether Wireless SIM inventory.\n- Online: SIM shipped within 2 business days (free shipping).\n- SIM types: Nano, Micro, Standard (adapter include",
+    "document_id": "new_line_activation_process",
+    "source": "new_line_activation_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "new_line_activation_process_chunk_003",
+    "content": " shipped within 2 business days (free shipping).\n- SIM types: Nano, Micro, Standard (adapter included).\n\n### eSIM\n- QR code issued in-store or via email.\n- Activation within minutes.\n- Compatible devices: iPhone XS+, Samsung Galaxy S20+, Google Pixel 3+.\n- Dual SIM supported on compatible devices.\n\n### Remote Provisioning (Aether Wireless Phase 4+)\n- Service callbacks activate eSIM without store visit.\n- Customer receives QR code via email or app.\n- Self-service activation through the Aether Wireless app.\n\n---\n\n## Activation Flow\n\n1. System creates the account and assigns billing cycle date.\n2. SIM/eSIM is provisioned and activated.\n3. Customer receives welcome SMS within 2 minutes.\n4. Welcome email with account details, app download link, and support contacts.\n5. First bill includes prorated charges from activation date to end of billing cycle.\n6. 14-day return window starts at activation date.\n\n---\n\n## Activation Fees\n\n| Plan | Activation Fee | Waiver Conditions |\n|------|-----------",
+    "document_id": "new_line_activation_process",
+    "source": "new_line_activation_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "new_line_activation_process_chunk_004",
+    "content": "on date.\n\n---\n\n## Activation Fees\n\n| Plan | Activation Fee | Waiver Conditions |\n|------|---------------|-------------------|\n| Essential | $35 | Waived with 2-year commitment |\n| Standard | $35 | Waived with Premium+ plan or autopay |\n| Premium | $0 | Waived |\n| Family | $0 | Waived |\n| Unlimited | $0 | Waived |\n| Business | $0 | Waived |\n| Senior | $0 | Waived |\n\n---\n\n## First Bill Expectations\n\n- Prorated plan charge for days remaining in billing cycle.\n- Full month of plan charge for the new cycle.\n- Taxes and regulatory fees.\n- Activation fee (if applicable).\n- Device installment (if applicable, first payment).\n- Protection plan (if enrolled, first payment).\n- Promotional credits (if applicable, shown as negative line item).\n\n---\n\n## BYOD (Bring Your Own Device) Activation\n\n- Device must be unlocked from previous carrier.\n- Device must be compatible with Aether Wireless network bands.\n- IMEI check available at aetherwireless.com/byod.\n- BYOD customers receive a $50 account credit.",
+    "document_id": "new_line_activation_process",
+    "source": "new_line_activation_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "new_line_activation_process_chunk_005",
+    "content": "s.\n- IMEI check available at aetherwireless.com/byod.\n- BYOD customers receive a $50 account credit.\n\n---\n\n## FAQs\n\n**Q: How long does activation take?**\nA: 5–10 minutes in-store with correct documentation; up to 1 hour online.\n\n**Q: Can I activate my own device?**\nA: Yes (BYOD); only plan and SIM/eSIM required.\n\n**Q: What if I lose my SIM?**\nA: Replacement SIM issued in 10 minutes in-store; eSIM re-issued via app or email.\n\n**Q: Can I activate multiple lines at once?**\nA: Yes, each line is processed independently. Family plan lines are activated together.\n\n**Q: Do I need to be at a store?**\nA: No, online and phone activation are available for most scenarios.\n\n---\n\n**Contact Retail Operations:**\n- Retail Helpline: 1-833-AETHER-RTL\n- Email: activations@aetherwireless.com\n\n*Activation terms apply. Subject to credit approval.*\n",
+    "document_id": "new_line_activation_process",
+    "source": "new_line_activation_process.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "payment_eligibility_terms_chunk_001",
+    "content": "# Payment & Eligibility Terms\n\n## Document Information\n- **Document ID:** AW-BIL-002\n- **Version:** 2.0\n- **Last Updated:** June 2026\n- **Department:** Finance Operations\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nThese terms define accepted payment methods, payment plan eligibility, credit requirements, and dispute resolution for billed amounts at Aether Wireless.\n\n## Accepted Payment Methods\n\n| Method | Availability | Notes |\n|--------|-------------|-------|\n| Credit card (Visa, Mastercard, Amex, Discover) | All channels | No surcharge |\n| Debit card | All channels | No surcharge |\n| ACH (bank account) | All channels | 3–5 business day settlement |\n| In-store cash | Retail locations | Instant posting |\n| In-store card | Retail locations | Instant posting |\n| Digital wallet (Apple Pay, Google Pay) | App and web | Instant posting |\n| Check (mailed) | Billing address only | 7–10 business day processing |\n\n---\n\n## Payment Method Requirements\n\n| Method | Requirement |\n|--------|---",
+    "document_id": "payment_eligibility_terms",
+    "source": "payment_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "payment_eligibility_terms_chunk_002",
+    "content": "siness day processing |\n\n---\n\n## Payment Method Requirements\n\n| Method | Requirement |\n|--------|-------------|\n| Credit/Debit | Non-expired, valid billing address, not prepaid |\n| ACH | Verified US bank account, routing + account number |\n| Digital wallet | Linked funding source on file |\n| Cash | Exact change not required; change given at register |\n\n**Note:** Prepaid cards are accepted for one-time payments only, not for autopay enrollment.\n\n---\n\n## Payment Plans (Installments)\n\nEligible customers may split an outstanding balance into installments:\n\n### Eligibility\n- Account status: Active\n- Tenure: 12+ months\n- Minimum outstanding balance: $100\n- No prior payment plan defaults in last 12 months\n\n### Terms\n- Maximum term: 3 installments (monthly payments).\n- Interest: 0% for first payment plan; 5% for subsequent plans.\n- Late payment fees apply per missed installment.\n- Payment plan enrollment limited to once per 6 months.\n\n### Not Eligible\n- Delinquent accounts with prior defaults.",
+    "document_id": "payment_eligibility_terms",
+    "source": "payment_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "payment_eligibility_terms_chunk_003",
+    "content": "nrollment limited to once per 6 months.\n\n### Not Eligible\n- Delinquent accounts with prior defaults.\n- Accounts in active fraud review.\n- Accounts with balances > $500 (requires manager approval).\n\n---\n\n## Credit Check Requirements\n\n| Transaction | Credit Check Required | Notes |\n|-------------|----------------------|-------|\n| New line (no device) | Soft pull | No impact on credit score |\n| New line (with device) | Hard pull | May impact credit score |\n| Device upgrade (financed) | Hard pull | For financing tier assessment |\n| Plan change (no device) | No | Standard processing |\n\n---\n\n## Prepaid Balance / Deposits\n\n- New customers with no credit history may be required to pay a deposit.\n- Deposit range: $100–$500 based on credit assessment.\n- Deposit is refundable after 12 months of on-time payments.\n- Deposit is applied toward the final invoice upon account closure.\n\n---\n\n## Disputes\n\n- Disputes must be filed within **60 days** of invoice date.\n- Required information: invoice number,",
+    "document_id": "payment_eligibility_terms",
+    "source": "payment_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "payment_eligibility_terms_chunk_004",
+    "content": "- Disputes must be filed within **60 days** of invoice date.\n- Required information: invoice number, disputed amount, reason.\n- Aether Wireless investigates within 5 business days.\n- Credit is issued for validated errors; customer is notified of outcome.\n- Disputed amounts are not subject to late fees during investigation.\n- If unresolved, customers may escalate to the CFPB or state regulatory body.\n\n---\n\n## Auto-Pay & Reminders\n\n- Autopay processes on the invoice date (not the due date).\n- Reminder SMS sent 3 days before autopay processes.\n- Reminder email sent 1 day before due date if balance is not autopay-enabled.\n- Past due notices sent on days 7, 15, 30, and 45.\n\n---\n\n## FAQs\n\n**Q: Can I pay from a bank account of another person?**\nA: No, the funding bank account must belong to the account holder.\n\n**Q: How quickly do payments post?**\nA: Card and digital wallet payments post instantly; ACH takes 3–5 business days; checks take 7–10 business days.\n\n**Q: Is there a fee to pay by car",
+    "document_id": "payment_eligibility_terms",
+    "source": "payment_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "payment_eligibility_terms_chunk_005",
+    "content": "tly; ACH takes 3–5 business days; checks take 7–10 business days.\n\n**Q: Is there a fee to pay by card?**\nA: No surcharge for card payment. A $25 fee applies for returned ACH payments.\n\n**Q: Can I set up automatic partial payments?**\nA: No, autopay processes the full balance. Partial payments require manual processing.\n\n---\n\n**Contact Billing:**\n- Email: billing@aetherwireless.com\n- Payment Support: 1-833-AETHER-PAY\n\n*Payment terms apply.*\n",
+    "document_id": "payment_eligibility_terms",
+    "source": "payment_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "plan_upgrade_policy_chunk_001",
+    "content": "# Plan Upgrade Policy\n\n## Document Information\n- **Document ID:** AW-PLN-002\n- **Version:** 2.0\n- **Last Updated:** July 2026\n- **Department:** Consumer Plans\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nThis policy defines when and how a customer may move to a higher-tier plan, how eligibility is determined, and how promotional pricing applies during upgrades.\n\n## Eligibility Criteria\n\nA customer is eligible for an immediate plan upgrade when:\n\n- Account is in **Active** status (no outstanding balance older than 30 days).\n- Current plan has been on the account for at least **30 days**.\n- No unpaid device installment balance in arrears.\n- Identity verification is current (KYC within last 12 months).\n- Customer is not flagged for fraud or abuse review.\n\n**Exclusions:**\n- Accounts flagged for fraud or abuse.\n- Delinquent accounts (balance outstanding > 30 days).\n- Accounts under credit review.\n\n---\n\n## Account Status Rules\n\n| Account Status | Upgrade Allowed | Notes |\n|-------------",
+    "document_id": "plan_upgrade_policy",
+    "source": "plan_upgrade_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "plan_upgrade_policy_chunk_002",
+    "content": "t review.\n\n---\n\n## Account Status Rules\n\n| Account Status | Upgrade Allowed | Notes |\n|----------------|-----------------|-------|\n| Active         | Yes             | Immediate processing |\n| Prospect       | Yes             | Requires new plan activation first |\n| Delinquent     | No              | Must settle balance, then upgrade |\n| Suspended      | No              | Must contact Customer Care |\n\n---\n\n## Available Upgrade Paths\n\n| Current Plan | Available Upgrades | Minimum Tenure |\n|--------------|--------------------|----------------|\n| Essential    | Standard, Premium, Family | 30 days |\n| Standard     | Premium, Family, Unlimited | 30 days |\n| Premium      | Unlimited, Family, Business | 30 days |\n| Family       | Unlimited, Business | 30 days |\n| Senior       | Essential, Standard, Premium | 60 days |\n\n**Note:** Business plan requires a minimum of 5 lines and credit approval.\n\n---\n\n## Upgrade Process\n\n1. Representative confirms eligibility (see criteria above).\n2. System anal",
+    "document_id": "plan_upgrade_policy",
+    "source": "plan_upgrade_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "plan_upgrade_policy_chunk_003",
+    "content": "---\n\n## Upgrade Process\n\n1. Representative confirms eligibility (see criteria above).\n2. System analyzes 60-day average data/talk usage to recommend target plan.\n3. Representative presents recommendation and alternative tiers.\n4. Customer consents to new plan price and effective date.\n5. Any applicable promotion is applied (e.g., PROMO-0001 Premium Upgrade Discount).\n6. System applies change; customer receives confirmation SMS within 5 minutes.\n7. Updated terms are emailed to customer within 24 hours.\n\n---\n\n## Proration Rules\n\n- Upgrades take effect **immediately** on the change date.\n- The customer pays the difference between old and new monthly price for the remainder of the cycle.\n- Prorated amount is calculated as: `(new_price - old_price) × days_remaining / days_in_cycle`.\n- Device installment schedules are unaffected by plan changes.\n- Taxes and regulatory fees are recalculated on the new plan price.\n\n---\n\n## Promotional Pricing\n\n- Promotions stack only if explicitly stated (e.g.",
+    "document_id": "plan_upgrade_policy",
+    "source": "plan_upgrade_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "plan_upgrade_policy_chunk_004",
+    "content": "the new plan price.\n\n---\n\n## Promotional Pricing\n\n- Promotions stack only if explicitly stated (e.g., bundle offers).\n- Discount duration is noted at offer time; plan returns to standard price after expiry.\n- Representative must inform customer of the post-promotion price.\n- Customers may opt out of a promotion within 30 days without penalty.\n\n---\n\n## Usage-Based Recommendations\n\nThe Aether Wireless system performs automated plan reviews:\n\n- **Downgrade candidates:** Usage < 40% of plan allowance for 3 consecutive months.\n- **Upgrade candidates:** Usage > 80% of plan allowance for 2 consecutive months.\n- Recommendations are sent via SMS at the start of each billing cycle.\n- Customers may request a usage review at any time.\n\n---\n\n## FAQs\n\n**Q: How soon can I upgrade after joining?**\nA: Typically 30 days after activation, or earlier during promotional windows.\n\n**Q: Do I lose my number when I upgrade?**\nA: No. Number portability is independent of plan changes.\n\n**Q: Can I upgrade a singl",
+    "document_id": "plan_upgrade_policy",
+    "source": "plan_upgrade_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "plan_upgrade_policy_chunk_005",
+    "content": "n I upgrade?**\nA: No. Number portability is independent of plan changes.\n\n**Q: Can I upgrade a single line on a Family plan?**\nA: No. Family plans change as a unit; per-line add-ons are available instead.\n\n**Q: Will my hotspot allowance increase?**\nA: Yes, the new plan's hotspot allowance applies immediately.\n\n**Q: Can I reverse an upgrade?**\nA: Within 24 hours, a reversal can be processed by Customer Care. After 24 hours, the change is effective until the next billing cycle.\n\n---\n\n**Contact Plan Team:**\n- Plan Helpline: 1-833-AETHER\n- Email: plans@aetherwireless.com\n\n*Terms and conditions apply.*\n",
+    "document_id": "plan_upgrade_policy",
+    "source": "plan_upgrade_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "port_in_policy_chunk_001",
+    "content": "# Port-In Policy\n\n## Document Information\n- **Document ID:** AW-SRV-001\n- **Version:** 2.5\n- **Last Updated:** August 2026\n- **Department:** Carrier Services\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nNumber porting brings an existing phone number from another carrier to Aether Wireless. This policy covers eligibility, timelines, required information, common failure reasons, and escalation procedures.\n\n## Port-In Eligibility\n\n- The number must be **active** on the losing carrier.\n- Account on the losing carrier must be in good standing.\n- A valid **transfer PIN (TPIN)** and account number are required.\n- The number must not be mid-port from a recent move.\n- The number must not be on a suspended or terminated line.\n- No pending obligations (e.g., device installment balance) on losing carrier.\n\n---\n\n## Required Information\n\n| Item | Description |\n|------|-------------|\n| Phone number | The number to port (must match losing carrier records) |\n| Losing carrier account number | Found",
+    "document_id": "port_in_policy",
+    "source": "port_in_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "port_in_policy_chunk_002",
+    "content": "r | The number to port (must match losing carrier records) |\n| Losing carrier account number | Found on losing carrier bill or account portal |\n| Transfer PIN (TPIN) | Generated from losing carrier's app or by calling them |\n| Account holder name | Must match losing carrier records exactly |\n| Billing address | Must match losing carrier records exactly |\n| Service address | Address where service is provided (may differ from billing) |\n\n---\n\n## Porting Timelines\n\n| Scenario | Expected Timeline |\n|----------|-------------------|\n| Same region, all details correct | 2–4 hours |\n| Cross-region / complex cases | 24–48 hours |\n| Corporate / business lines | 3–5 business days |\n| Prepaid to postpaid | 24–48 hours |\n| International numbers | Not supported (US numbers only) |\n\n---\n\n## Common Failure Reasons\n\n| Issue | Resolution |\n|-------|------------|\n| Incorrect TPIN | Customer requests new TPIN from losing carrier |\n| Incorrect account number | Verify on losing carrier bill |\n| Name/address",
+    "document_id": "port_in_policy",
+    "source": "port_in_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "port_in_policy_chunk_003",
+    "content": "IN from losing carrier |\n| Incorrect account number | Verify on losing carrier bill |\n| Name/address mismatch | Customer updates records with losing carrier |\n| Number on suspended line | Customer reinstates line with losing carrier |\n| Pending device balance | Customer pays off balance before porting |\n| Number already in port process | Wait for current port to complete |\n| Losing carrier blocking port | Customer requests unblock from losing carrier |\n\n---\n\n## Port-In Process\n\n1. Customer provides required information (see above).\n2. Aether Wireless representative submits port request.\n3. Losing carrier validates and releases the number.\n4. Aether Wireless activates the number on the new SIM/eSIM.\n5. Customer receives confirmation SMS when port completes.\n6. Service on the losing carrier is terminated automatically.\n\n---\n\n## Zero-Day Trouble Resolution\n\nFor issues at activation, the **Zero-Day Experience** callback queue applies:\n\n1. Store representative verifies port details and docu",
+    "document_id": "port_in_policy",
+    "source": "port_in_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "port_in_policy_chunk_004",
+    "content": "ero-Day Experience** callback queue applies:\n\n1. Store representative verifies port details and documents the issue.\n2. Representative escalates via the internal Port Desk chat.\n3. Case number is provided to the customer.\n4. Port Desk investigates and resolves within 24 hours.\n5. Customer is called back with status update.\n6. If unresolved after 24 hours, case is escalated to carrier relations.\n\n---\n\n## Partial Port (Line-by-Line)\n\n- Customers may port individual lines from a multi-line account.\n- Each line is processed independently.\n- Remaining lines stay with the losing carrier until ported.\n\n---\n\n## FAQs\n\n**Q: Can I cancel a port before it completes?**\nA: Yes, before the port completes; after activation the number is on Aether Wireless.\n\n**Q: Can I keep both plans active during the port?**\nA: No, the port transfers service; overlapping charges apply only if requested.\n\n**Q: What if my port fails?**\nA: The store resolves with the Port Desk or re-attempts with corrected details.\n\n**Q",
+    "document_id": "port_in_policy",
+    "source": "port_in_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "port_in_policy_chunk_005",
+    "content": "y port fails?**\nA: The store resolves with the Port Desk or re-attempts with corrected details.\n\n**Q: How long does the whole process take?**\nA: Typically 2–4 hours for straightforward ports; up to 48 hours for complex cases.\n\n**Q: Will I lose service during the port?**\nA: Brief interruption (minutes) during the transfer. Keep your old SIM active until confirmation.\n\n---\n\n**Contact Carrier Services:**\n- Port Desk: 1-833-AETHER-PORT\n- Email: port@aetherwireless.com\n\n*Ports subject to carrier schedules. US numbers only.*\n",
+    "document_id": "port_in_policy",
+    "source": "port_in_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "postpaid_plan_guidelines_chunk_001",
+    "content": "# Postpaid Plan Guidelines\n\n## Document Information\n- **Document ID:** AW-PLN-001\n- **Version:** 3.0\n- **Last Updated:** August 2026\n- **Department:** Consumer Plans\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nAether Wireless offers tiered postpaid plans for individual and family lines. This document covers plan categories, allowances, overage behavior, and feature availability per plan.\n\n## Plan Categories\n\n### 1. Essential\n- Entry-level plan for light users.\n- 5 GB high-speed data, 500 talk minutes, 500 SMS.\n- Monthly price: $40/month.\n- No hotspot, no international calling.\n- Ideal for seniors and secondary lines.\n\n### 2. Standard\n- Mid-tier plan for everyday users.\n- 20 GB high-speed data, 1,000 talk minutes, 1,000 SMS.\n- Monthly price: $60/month.\n- Mobile hotspot included (10 GB/month).\n- Wi-Fi calling supported.\n\n### 3. Premium\n- High-tier plan for heavy users.\n- 50 GB high-speed data, unlimited talk & text.\n- Monthly price: $80/month.\n- 25 GB hotspot, international calling",
+    "document_id": "postpaid_plan_guidelines",
+    "source": "postpaid_plan_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "postpaid_plan_guidelines_chunk_002",
+    "content": "peed data, unlimited talk & text.\n- Monthly price: $80/month.\n- 25 GB hotspot, international calling to 50+ countries included.\n- Priority network access during congestion.\n\n### 4. Family\n- Multi-line plan for households (2+ lines).\n- 100 GB shared data pool, unlimited talk & text.\n- Monthly price: $120/month (includes 2 lines; +$30/line).\n- Data prioritization: Primary line gets 60% of shared pool.\n- Requires at least two lines on the account.\n\n### 5. Unlimited\n- Truly unlimited high-speed data, talk, and text.\n- Monthly price: $90/month.\n- 50 GB hotspot, international calling to 80+ countries.\n- Network deprioritization only during extreme congestion.\n\n### 6. Business\n- Enterprise plan with SLA guarantees.\n- 200 GB pooled data per 5 lines, unlimited talk & text.\n- Monthly price: $200/month (5 lines; +$40/line).\n- Dedicated business support line, MDM-ready.\n\n### 7. Senior\n- Discounted plan for customers 65+.\n- 10 GB high-speed data, unlimited talk & text.\n- Monthly price: $30/month.\n-",
+    "document_id": "postpaid_plan_guidelines",
+    "source": "postpaid_plan_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "postpaid_plan_guidelines_chunk_003",
+    "content": "lan for customers 65+.\n- 10 GB high-speed data, unlimited talk & text.\n- Monthly price: $30/month.\n- No hotspot, domestic calling only.\n- Requires age verification at activation.\n\n---\n\n## Data Allowance Behavior\n\n| Plan        | High-Speed Data       | After Allowance                                     |\n|-------------|-----------------------|-----------------------------------------------------|\n| Essential   | 5 GB                  | Throttled to 128 kbps                               |\n| Standard    | 20 GB                 | Throttled to 256 kbps                               |\n| Premium     | 50 GB                 | Throttled to 512 kbps                               |\n| Family      | 100 GB shared         | Throttled to 256 kbps per line                      |\n| Unlimited   | Unlimited             | Priority below Essential users during congestion    |\n| Business    | 200 GB pooled         | Throttled to 1 Mbps per line                        |\n| Senior      | 10 GB              ",
+    "document_id": "postpaid_plan_guidelines",
+    "source": "postpaid_plan_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "postpaid_plan_guidelines_chunk_004",
+    "content": "         | Throttled to 1 Mbps per line                        |\n| Senior      | 10 GB                 | Throttled to 128 kbps                               |\n\n**Overage:** No hard data caps on Premium, Family, Unlimited, or Business plans. Essential, Standard, and Senior deprioritize instead of overage billing.\n\n---\n\n## Plan Features Matrix\n\n| Feature            | Essential | Standard | Premium | Family | Unlimited | Business | Senior |\n|--------------------|-----------|----------|---------|--------|-----------|----------|--------|\n| Talk (min)         | 500       | 1,000    | Unlimited| Unlimited| Unlimited| Unlimited| Unlimited|\n| Text               | 500       | 1,000    | Unlimited| Unlimited| Unlimited| Unlimited| Unlimited|\n| Hotspot            | No        | 10 GB    | 25 GB   | 10 GB  | 50 GB     | Yes      | No     |\n| Intl. Calling      | No        | No       | 50+ ctry| No     | 80+ ctry  | Yes      | No     |\n| Wi-Fi Calling      | No        | Yes      | Yes     | Yes    | ",
+    "document_id": "postpaid_plan_guidelines",
+    "source": "postpaid_plan_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "postpaid_plan_guidelines_chunk_005",
+    "content": " | 80+ ctry  | Yes      | No     |\n| Wi-Fi Calling      | No        | Yes      | Yes     | Yes    | Yes       | Yes      | Yes    |\n| Priority Network   | No        | No       | Yes     | No     | Yes       | Yes      | No     |\n| Mobile Hotspot     | No        | Shared   | Dedicated| Shared| Dedicated | Shared   | No     |\n| Voicemail          | No        | Yes      | Yes     | Yes    | Yes       | Yes      | Yes    |\n| Call Forwarding    | No        | Yes      | Yes     | Yes    | Yes       | Yes      | No     |\n| Spam Call Blocking | No        | Yes      | Yes     | Yes    | Yes       | Yes      | Yes    |\n\n---\n\n## Change Policies\n\n- **Downgrade:** Effective from next billing cycle.\n- **Upgrade:** Effective immediately; prorated charges apply.\n- **Mid-cycle changes:** Full plan price billed on change date.\n- 14-day cooling-off period for new lines (see Returns & Refunds Policy).\n- Plan changes do not affect device installment contracts.\n\n---\n\n## Promotional Pricing\n\n- Promotions are",
+    "document_id": "postpaid_plan_guidelines",
+    "source": "postpaid_plan_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "postpaid_plan_guidelines_chunk_006",
+    "content": "n changes do not affect device installment contracts.\n\n---\n\n## Promotional Pricing\n\n- Promotions are per-account, not per-line.\n- A maximum of two promotional discounts may apply simultaneously.\n- Promotional prices return to standard rates at the end of the promo period.\n- Customers are notified 30 days before promo expiry.\n\n---\n\n## FAQs\n\n**Q: Can I share my data with other lines?**\nA: On Family plans, data is automatically shared. Other plans can add data sharing for $10/month.\n\n**Q: What happens when I travel abroad?**\nA: Premium, Family, Unlimited, and Business plans include international calling. Essential and Standard require a travel add-on ($15/day for 500 MB + unlimited calls in destination).\n\n**Q: Can I switch plans at any time?**\nA: Yes, subject to plan activation dates and proration rules above.\n\n**Q: Is there a family discount?**\nA: Yes, the Family plan saves approximately 25% vs. two Standard plans.\n\n**Q: Do unused data roll over?**\nA: No. Data allowances reset each billi",
+    "document_id": "postpaid_plan_guidelines",
+    "source": "postpaid_plan_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "postpaid_plan_guidelines_chunk_007",
+    "content": "5% vs. two Standard plans.\n\n**Q: Do unused data roll over?**\nA: No. Data allowances reset each billing cycle.\n\n---\n\n**Contact Plan Team:**\n- Plan Helpline: 1-833-AETHER\n- Email: plans@aetherwireless.com\n- Visit nearest Aether Wireless retail store\n\n*Plans and pricing subject to change. Terms and conditions apply.*\n",
+    "document_id": "postpaid_plan_guidelines",
+    "source": "postpaid_plan_guidelines.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "privacy_data_protection_policy_chunk_001",
+    "content": "# Privacy & Data Protection Policy\n\n## Document Information\n- **Document ID:** AW-LEG-001\n- **Version:** 1.0\n- **Last Updated:** August 2026\n- **Department:** Legal & Compliance\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nAether Wireless is committed to protecting customer privacy and personal data. This policy describes what data is collected, how it is used, and customer rights under applicable privacy laws.\n\n## Data Collected\n\n| Category | Examples | Purpose |\n|----------|----------|---------|\n| Account information | Name, address, email, phone | Service provisioning, billing |\n| Payment information | Card numbers, bank accounts | Payment processing |\n| Device information | IMEI, device model, OS version | Device management, support |\n| Usage data | Call logs, data usage, SMS metadata | Service optimization, billing |\n| Location data | Cell tower connections, GPS (with consent) | Network optimization, emergency services |\n| App usage | Aether Wireless app interactions | Servic",
+    "document_id": "privacy_data_protection_policy",
+    "source": "privacy_data_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "privacy_data_protection_policy_chunk_002",
+    "content": "| Network optimization, emergency services |\n| App usage | Aether Wireless app interactions | Service improvement |\n| Support interactions | Call recordings, chat transcripts | Quality assurance, dispute resolution |\n\n---\n\n## Data Usage Principles\n\n- Data is collected only for stated purposes.\n- Data is not sold to third parties.\n- Data is shared only with service providers under contract.\n- Data is retained only as long as necessary.\n- Customers can request data deletion (subject to legal retention requirements).\n\n---\n\n## Customer Rights\n\n| Right | Description | How to Exercise |\n|-------|-------------|-----------------|\n| Access | Request a copy of your personal data | App → Privacy → Data Request |\n| Correction | Request correction of inaccurate data | App → Privacy → Update Info |\n| Deletion | Request deletion of your data | App → Privacy → Delete Request |\n| Portability | Request data in machine-readable format | App → Privacy → Export Data |\n| Opt-out | Opt out of marketing data ",
+    "document_id": "privacy_data_protection_policy",
+    "source": "privacy_data_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "privacy_data_protection_policy_chunk_003",
+    "content": "ta in machine-readable format | App → Privacy → Export Data |\n| Opt-out | Opt out of marketing data use | App → Privacy → Marketing Opt-Out |\n| Restrict processing | Limit how your data is used | App → Privacy → Processing Settings |\n\n---\n\n## Third-Party Sharing\n\n| Recipient | Purpose | Safeguards |\n|-----------|---------|------------|\n| Payment processors | Payment handling | PCI-DSS compliant |\n| Network equipment vendors | Network optimization | Data anonymized |\n| Customer support platforms | Service delivery | Encrypted, access-controlled |\n| Regulatory bodies | Legal compliance | Per applicable law |\n\n---\n\n## Data Security\n\n- All data encrypted at rest (AES-256) and in transit (TLS 1.3).\n- Multi-factor authentication for customer accounts.\n- Regular security audits and penetration testing.\n- Employee access to customer data is logged and monitored.\n- Incident response plan in place with 72-hour breach notification.\n\n---\n\n## Data Retention\n\n| Data Type | Retention Period |\n|------",
+    "document_id": "privacy_data_protection_policy",
+    "source": "privacy_data_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "privacy_data_protection_policy_chunk_004",
+    "content": " with 72-hour breach notification.\n\n---\n\n## Data Retention\n\n| Data Type | Retention Period |\n|-----------|-----------------|\n| Account information | Duration of account + 7 years |\n| Payment records | 7 years (regulatory requirement) |\n| Call/SMS metadata | 18 months |\n| Location data | 12 months |\n| Support interactions | 3 years |\n| App usage data | 24 months |\n\n---\n\n## Children's Privacy\n\n- Aether Wireless does not knowingly collect data from children under 13.\n- Parental consent required for minors (under 18) on family accounts.\n\n---\n\n## Policy Updates\n\n- Material changes communicated 30 days in advance.\n- Non-material updates posted on the Aether Wireless website.\n- Continued use of services constitutes acceptance of updated policy.\n\n---\n\n## FAQs\n\n**Q: Does Aether Wireless sell my data?**\nA: No. We do not sell personal data to third parties.\n\n**Q: How do I request my data?**\nA: Via the Aether Wireless app under Privacy Settings, or by emailing privacy@aetherwireless.com.\n\n**Q: How",
+    "document_id": "privacy_data_protection_policy",
+    "source": "privacy_data_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "privacy_data_protection_policy_chunk_005",
+    "content": "the Aether Wireless app under Privacy Settings, or by emailing privacy@aetherwireless.com.\n\n**Q: How long is my data kept?**\nA: See the retention table above. Most data is retained for the duration of your account plus a legal holding period.\n\n---\n\n**Contact Privacy:**\n- Email: privacy@aetherwireless.com\n- Data Protection Officer: dpo@aetherwireless.com\n\n*Privacy policy compliant with CCPA, GDPR, and applicable state privacy laws.*\n",
+    "document_id": "privacy_data_protection_policy",
+    "source": "privacy_data_protection_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "promotions_eligibility_terms_chunk_001",
+    "content": "# Promotions & Offer Eligibility Terms\n\n## Document Information\n- **Document ID:** AW-PRO-001\n- **Version:** 2.0\n- **Last Updated:** August 2026\n- **Department:** Marketing Operations\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nPromotions and offers provide discounts on plans, devices, and bundles. This document defines the offer catalog, eligibility rules, stacking policies, and terms for each promotion.\n\n## Offer Catalog\n\n| Offer ID | Name | Type | Benefit | Valid Until |\n|----------|------|------|---------|-------------|\n| PROMO-0001 | Premium Upgrade Discount | Plan offer | $10/mo off Premium for 12 months | Dec 2026 |\n| PROMO-0002 | Family Bundle Deal | Plan offer | $15/mo off Family with 2+ lines | Dec 2026 |\n| PROMO-0003 | New Device Trade-In Bonus | Device promo | $200 off flagship with trade-in | Dec 2026 |\n| PROMO-0004 | Premium + Pixel Bundle | Bundle | Premium + Pixel 9, $150 off | Nov 2026 |\n| PROMO-0005 | Win-Back Unlimited Offer | Plan offer | Unlimited at $75/mo f",
+    "document_id": "promotions_eligibility_terms",
+    "source": "promotions_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "promotions_eligibility_terms_chunk_002",
+    "content": ", $150 off | Nov 2026 |\n| PROMO-0005 | Win-Back Unlimited Offer | Plan offer | Unlimited at $75/mo for 6 months | Dec 2026 |\n| PROMO-0006 | Referral Bonus | Account credit | $50 credit for referrer + referee | Dec 2026 |\n| PROMO-0007 | Senior Plan Promo | Plan offer | Senior plan at $25/mo for 12 months | Dec 2026 |\n| PROMO-0008 | Holiday Bundle Special | Bundle | Family plan + 2 devices, $300 off | Jan 2027 |\n\n---\n\n## Eligibility by Account Status\n\n| Account Status | Eligible Offers |\n|----------------|-----------------|\n| Active | PROMO-0001, PROMO-0002, PROMO-0003, PROMO-0004, PROMO-0006 |\n| Prospect | PROMO-0001, PROMO-0003, PROMO-0007 |\n| Delinquent | PROMO-0005 (win-back only) |\n| Senior (65+) | PROMO-0007 |\n\n---\n\n## Offer Matching Rules\n\n- Representative matches offers based on account status, plan, and customer intent.\n- A maximum of **2 offers** may be presented per customer interaction.\n- Bundles (PROMO-0004, PROMO-0008) cannot stack with individual plan or device offers.\n- W",
+    "document_id": "promotions_eligibility_terms",
+    "source": "promotions_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "promotions_eligibility_terms_chunk_003",
+    "content": "eraction.\n- Bundles (PROMO-0004, PROMO-0008) cannot stack with individual plan or device offers.\n- Win-back offers (PROMO-0005) are exclusive to delinquent accounts.\n- Referral bonus (PROMO-0006) requires a valid referral code from an existing customer.\n\n---\n\n## Stacking Rules\n\n| Combination | Allowed |\n|-------------|---------|\n| Plan discount + device trade-in | Yes |\n| Plan discount + bundle | No |\n| Two plan discounts | No |\n| Win-back + any other offer | No |\n| Referral credit + plan discount | Yes |\n| Referral credit + device promo | Yes |\n| Two device promos | No |\n| Bundle + referral credit | No |\n\n---\n\n## Offer Duration & Expiry\n\n| Offer Type | Duration | Notes |\n|------------|----------|-------|\n| Plan discounts | 12 months (or stated) | Returns to standard price after |\n| Device credits | Instant at purchase | One-time credit |\n| Bundle offers | Duration of bundle commitment | Early cancellation forfeits discount |\n| Referral credits | One-time | Credited within 30 days |\n| ",
+    "document_id": "promotions_eligibility_terms",
+    "source": "promotions_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "promotions_eligibility_terms_chunk_004",
+    "content": " Early cancellation forfeits discount |\n| Referral credits | One-time | Credited within 30 days |\n| Win-back offers | 6 months | Extended if customer remains active |\n\n- Promotions expire at the `valid_until` date of the offer.\n- Customers are notified 30 days before promotional pricing expires.\n- Expired promotions cannot be reactivated.\n\n---\n\n## Promotional Terms\n\n- All promotions are subject to availability.\n- Aether Wireless reserves the right to modify or withdraw promotions at any time.\n- Promotions are non-transferable and have no cash value.\n- Fraudulent use of promotions results in account review and potential termination.\n- Promotional pricing does not apply to taxes and regulatory fees.\n\n---\n\n## Customer Communication\n\n- Promotional offers are communicated via: SMS, email, app notifications, and in-store signage.\n- Customers may opt out of promotional communications at any time.\n- Opt-out does not affect active promotional pricing.\n\n---\n\n## FAQs\n\n**Q: Can I get two promotion",
+    "document_id": "promotions_eligibility_terms",
+    "source": "promotions_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "promotions_eligibility_terms_chunk_005",
+    "content": "e.\n- Opt-out does not affect active promotional pricing.\n\n---\n\n## FAQs\n\n**Q: Can I get two promotions on one order?**\nA: Yes, a plan offer plus a device promo (subject to stacking rules).\n\n**Q: What happens after a discount expires?**\nA: The plan returns to its standard price; you are notified 30 days in advance.\n\n**Q: Why was I not offered a promotion?**\nA: Eligibility is based on account status, plan type, and current promotions.\n\n**Q: Can I combine my referral credit with a trade-in?**\nA: Yes, referral credits and device trade-in bonuses can be combined.\n\n**Q: What if I cancel my line during a promotion?**\nA: The promotional discount is forfeited; standard early termination fees may apply.\n\n---\n\n**Contact Marketing:**\n- Email: offers@aetherwireless.com\n- Promotions Support: 1-833-AETHER-PROMO\n\n*Offers subject to availability. Terms and conditions apply.*\n",
+    "document_id": "promotions_eligibility_terms",
+    "source": "promotions_eligibility_terms.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "returns_refunds_policy_chunk_001",
+    "content": "# Returns & Refunds Policy\n\n## Document Information\n- **Document ID:** AW-SRV-003\n- **Version:** 3.2\n- **Last Updated:** August 2026\n- **Department:** Retail Operations\n- **Company:** Aether Wireless\n\n---\n\n## Overview\n\nCustomers may return devices and cancel lines within a cooling-off period. This policy defines return windows, restocking fees, refund mechanics, and device condition requirements.\n\n## Return Windows\n\n| Scenario | Window | Restocking Fee |\n|----------|--------|----------------|\n| New device (in-store or online) | 14 days | $35 (waived for DOA) |\n| eSIM / activation only (no device) | 14 days | None |\n| Open-box / refurbished device | 7 days | $35 |\n| Accessory return (unopened) | 30 days | None |\n| Accessory return (opened) | 14 days | None |\n\n---\n\n## Refund Mechanics\n\n- Full refund to original payment method within **7–10 business days**.\n- Activation fee is refunded when the full line is canceled within the return window.\n- Plan charges for days used are deducted from ",
+    "document_id": "returns_refunds_policy",
+    "source": "returns_refunds_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "returns_refunds_policy_chunk_002",
+    "content": " the full line is canceled within the return window.\n- Plan charges for days used are deducted from the refund.\n- Device installment payments made are refunded.\n- Promotional credits applied at purchase are deducted from the refund.\n\n---\n\n## Device Return Conditions\n\n### Acceptable Condition\n- Device must be returned with original packaging and accessories.\n- No cracks on screen or body.\n- No liquid damage indicators triggered.\n- Activation lock must be removed (iCloud, Google account, etc.).\n- Factory reset completed before return.\n\n### Condition Assessment\n\n| Condition | Action |\n|-----------|--------|\n| Like new | Full refund, no restocking fee |\n| Minor cosmetic wear | Full refund, $35 restocking fee |\n| Screen crack | 50% refund, $35 restocking fee |\n| Liquid damage | No refund, device returned to customer |\n| Missing accessories | Deduction of accessory value from refund |\n\n---\n\n## DoA (Dead on Arrival)\n\n- Reported within 14 days of activation.\n- Device must power on but fail to ",
+    "document_id": "returns_refunds_policy",
+    "source": "returns_refunds_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "returns_refunds_policy_chunk_003",
+    "content": " DoA (Dead on Arrival)\n\n- Reported within 14 days of activation.\n- Device must power on but fail to function as intended.\n- Replacement shipped next business day (or available in-store).\n- No restocking fee.\n- Return shipping paid by Aether Wireless.\n- Customer may request a refund instead of replacement.\n\n---\n\n## Return Process\n\n1. Customer initiates return via app, website, or in-store.\n2. Representative verifies purchase date and return window.\n3. Device diagnostics run in-store (or return label issued for online purchases).\n4. Return is processed per policy above.\n5. Refund issued within 7–10 business days of device receipt.\n6. Line is canceled or replaced; plan charges adjusted.\n7. Customer receives refund confirmation via email.\n\n---\n\n## Online / Phone Returns\n\n- Online purchases can be returned in-store or by mail.\n- Prepaid return label provided for mail returns.\n- Return shipping is free for defective/DOA items.\n- Customer pays return shipping for change-of-mind returns ($10 d",
+    "document_id": "returns_refunds_policy",
+    "source": "returns_refunds_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "returns_refunds_policy_chunk_004",
+    "content": "g is free for defective/DOA items.\n- Customer pays return shipping for change-of-mind returns ($10 deducted from refund).\n- Mail returns must be postmarked within the return window.\n\n---\n\n## Non-Returnable Items\n\n- Gift cards and prepaid airtime.\n- Activated software or digital content.\n- Devices reported lost or stolen.\n- Devices with third-party repairs.\n- Accessories that have been personalized.\n\n---\n\n## FAQs\n\n**Q: Can I return an activated device?**\nA: Yes, within the 14-day window, subject to conditions above.\n\n**Q: Who pays return shipping?**\nA: Aether Wireless pays for factory defects and DOA; customer pays for change-of-mind returns.\n\n**Q: When will I see my refund?**\nA: Within 7–10 business days of device receipt at our facility.\n\n**Q: Can I exchange instead of return?**\nA: Yes, exchanges are processed as a return + new purchase. Price differences are refunded or charged.\n\n**Q: What if I return after 14 days?**\nA: Returns after 14 days are not accepted. Consider filing a prote",
+    "document_id": "returns_refunds_policy",
+    "source": "returns_refunds_policy.md",
+    "category": "policies"
+  },
+  {
+    "chunk_id": "returns_refunds_policy_chunk_005",
+    "content": "What if I return after 14 days?**\nA: Returns after 14 days are not accepted. Consider filing a protection claim if the device is defective.\n\n---\n\n**Contact Retail Operations:**\n- Email: returns@aetherwireless.com\n- Return Support: 1-833-AETHER-RTL\n\n*Returns policy applies. See full Terms of Service for details.*\n",
+    "document_id": "returns_refunds_policy",
+    "source": "returns_refunds_policy.md",
+    "category": "policies"
+  }
+]
