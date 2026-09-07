@@ -59,9 +59,11 @@ Requires OPENROUTER_API_KEY in the environment or .env file.
 import argparse
 import re
 import sys
+from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence, Tuple, Union
+
+import httpx
 
 # ---------------------------------------------------------------------------
 # Make the repo root importable so `from src...` works from any CWD.
@@ -141,7 +143,7 @@ class KnowledgeDocument:
 #     Company: Aether Wireless
 # =============================================================================
 
-KB: Dict[str, KnowledgeMetadata] = {
+KB: dict[str, KnowledgeMetadata] = {
 
     # -------------------------------------------------------------------------
     # billing/  (Finance Operations)
@@ -362,20 +364,24 @@ KB: Dict[str, KnowledgeMetadata] = {
         category="mobile",
         sections=LONG_DOC_SECTIONS,
         brief=(
-            "Detailed postpaid plan catalog. Cover: plan categories (Essential "
-            "5GB/500min/500SMS $40, Standard 20GB/1000/1000 $60, Premium 50GB/"
-            "unlimited $80, Family 100GB shared $120 for 2 lines +$30/line, "
-            "Unlimited $90, Business 200GB pooled per 5 lines $200 +$40/line, "
-            "Senior 65+ 10GB $30), data allowance/overage behavior table "
-            "(throttle to 128kbps Essential/Senior, 256kbps Standard/Family, "
-            "512kbps Premium, 1Mbps Business, deprioritize Unlimited)", 
-            "features matrix (talk, text, hotspot, intl. calling, Wi-Fi "
-            "calling, priority network, voicemail, call forwarding, spam "
-            "blocking), change policies (downgrade next cycle, upgrade "
-            "immediate with proration, 14-day cooling-off, no effect on device "
-            "installments), promotional pricing (per-account, max 2 "
-            "discounts, 30-day expiry notice), data sharing add-on $10/month, "
-            "FAQ on travel add-on $15/day, and FAQs."
+            (
+                "Detailed postpaid plan catalog. Cover: plan categories (Essential "
+                "5GB/500min/500SMS $40, Standard 20GB/1000/1000 $60, Premium 50GB/"
+                "unlimited $80, Family 100GB shared $120 for 2 lines +$30/line, "
+                "Unlimited $90, Business 200GB pooled per 5 lines $200 +$40/line, "
+                "Senior 65+ 10GB $30), data allowance/overage behavior table "
+                "(throttle to 128kbps Essential/Senior, 256kbps Standard/Family, "
+                "512kbps Premium, 1Mbps Business, deprioritize Unlimited)"
+            ),
+            (
+                "features matrix (talk, text, hotspot, intl. calling, Wi-Fi "
+                "calling, priority network, voicemail, call forwarding, spam "
+                "blocking), change policies (downgrade next cycle, upgrade "
+                "immediate with proration, 14-day cooling-off, no effect on device "
+                "installments), promotional pricing (per-account, max 2 "
+                "discounts, 30-day expiry notice), data sharing add-on $10/month, "
+                "FAQ on travel add-on $15/day, and FAQs."
+            ),
         ),
     ),
 
@@ -624,18 +630,22 @@ KB: Dict[str, KnowledgeMetadata] = {
         category="customer",
         sections=LONG_DOC_SECTIONS,
         brief=(
-            "End-to-end complaint process. Cover: complaint channels (in-store, "
-            "phone, chat, email, app, social media), categorization by type "
-            "(billing, service, network, device) and priority (standard 48-hour "
-            "first response, urgent 24 hours, critical same-day), complaint "
-            "lifecycle (acknowledge, investigate, resolve, close with customer)", 
-            "resolution targets per category table (billing 5 business days, "
-            "network 24 hours for verified outage, device 7 business days), "
-            "escalation ladder (frontline to supervisor to specialist team to "
-            "ombudsman), escalation to CFPB/FCC/state regulator after 8 weeks "
-            "unresolved, goodwill credit compensation policy, all complaints "
-            "logged with a case number and SLA, monthly complaint analytics "
-            "and reporting, and FAQs."
+            (
+                "End-to-end complaint process. Cover: complaint channels (in-store, "
+                "phone, chat, email, app, social media), categorization by type "
+                "(billing, service, network, device) and priority (standard 48-hour "
+                "first response, urgent 24 hours, critical same-day), complaint "
+                "lifecycle (acknowledge, investigate, resolve, close with customer)"
+            ),
+            (
+                "resolution targets per category table (billing 5 business days, "
+                "network 24 hours for verified outage, device 7 business days), "
+                "escalation ladder (frontline to supervisor to specialist team to "
+                "ombudsman), escalation to CFPB/FCC/state regulator after 8 weeks "
+                "unresolved, goodwill credit compensation policy, all complaints "
+                "logged with a case number and SLA, monthly complaint analytics "
+                "and reporting, and FAQs."
+            ),
         ),
     ),
 
@@ -956,11 +966,11 @@ def _llm_generate(
     system: str,
     user: str,
     *,
-    max_tokens: Optional[int] = None,
+    max_tokens: int | None = None,
     retries: int = 2,
-) -> Tuple[str, Dict]:
+) -> tuple[str, dict]:
     """Call the LLM with a single retry, returning (text, usage)."""
-    last_exc: Optional[Exception] = None
+    last_exc: Exception | None = None
     for attempt in range(1, retries + 1):
         try:
             messages = [
@@ -970,15 +980,15 @@ def _llm_generate(
             return llm.generate_with_usage(
                 messages, **({"max_tokens": max_tokens} if max_tokens else {})
             )
-        except Exception as exc:  # retry transient failures once
+        except httpx.HTTPError as exc:  # retry transient failures once
             last_exc = exc
             logger.warning("LLM call failed (attempt %s/%s): %s", attempt, retries, exc)
     raise last_exc  # type: ignore[misc]
 
 
-def _parse_outline(outline_md: str) -> List[str]:
+def _parse_outline(outline_md: str) -> list[str]:
     """Extract '## ' section titles (optionally numbered) from an outline."""
-    titles: List[str] = []
+    titles: list[str] = []
     for line in outline_md.splitlines():
         line = line.strip()
         m = re.search(r"#+\s+(.*?)\s*$", line)
@@ -992,7 +1002,7 @@ def _parse_outline(outline_md: str) -> List[str]:
 
 def _generate_long_doc(
     llm: LLMClient, meta: KnowledgeMetadata, target_sections: int
-) -> Tuple[str, Dict]:
+) -> tuple[str, dict]:
     """Generate a document section-by-section so it exceeds 10 pages."""
     outline_prompt = OUTLINE_PROMPT.format(
         target=max(11, target_sections * 3 // 4), n_sections=target_sections
@@ -1007,13 +1017,11 @@ def _generate_long_doc(
     # Guarantee the standard opening and closing sections.
     if not sections or sections[0].lower() != "overview":
         sections.insert(0, "Overview")
-    if not sections or sections[-1].lower().startswith("faq"):
-        sections.append("FAQs")
-    elif sections[-1].lower() != "faqs":
+    if not sections or sections[-1].lower() != "faqs":
         sections.append("FAQs")
 
-    body_parts: List[str] = []
-    total_usage: Dict = {}
+    body_parts: list[str] = []
+    total_usage: dict = {}
     generated_sections = 0
 
     content_sections = [s for s in sections if not s.lower().startswith("faq")]
@@ -1064,7 +1072,7 @@ def _generate_long_doc(
     return "\n\n".join(body_parts), total_usage
 
 
-def generate_body(llm: LLMClient, meta: KnowledgeMetadata) -> Tuple[str, Dict]:
+def generate_body(llm: LLMClient, meta: KnowledgeMetadata) -> tuple[str, dict]:
     """Generate the markdown body for a document via the configured LLM."""
     if meta.sections:
         return _generate_long_doc(llm, meta, meta.sections)
@@ -1107,7 +1115,7 @@ def _escape_xml(text: str) -> str:
 def _inline(text: str) -> str:
     """Escape XML and convert markdown inline markup to ReportLab XML tags."""
     text = _escape_xml(text)
-    codes: List[str] = []
+    codes: list[str] = []
 
     def _stash_code(m: "re.Match") -> str:
         codes.append(
@@ -1132,15 +1140,15 @@ _NUMBERED_RE = re.compile(r"^([ \t]*)(\d+)[.)]\s+(.*)$")
 _QUOTE_RE = re.compile(r"^>\s?(.*)$")
 _HR_RE = re.compile(r"^\s*(?:-{3,}|\*{3,}|_{3,})\s*$")
 
-Block = Tuple[str, Union[str, List[List[str]], Tuple[int, str, str], Tuple[int, str]]]
+Block = tuple[str, str | list[list[str]] | tuple[int, str, str] | tuple[int, str]]
 
 
-def _parse_markdown(body_md: str) -> List[Block]:
+def _parse_markdown(body_md: str) -> list[Block]:
     """Split markdown body into (kind, payload) blocks.
 
     Kinds: h2 / h3 / h4 / para / bullets / numbered / table / quote / hr.
     """
-    blocks: List[Block] = []
+    blocks: list[Block] = []
     for raw in body_md.splitlines():
         line = raw.rstrip()
 
@@ -1199,7 +1207,7 @@ MARGIN = 0.72 * inch
 AVAILABLE_WIDTH = letter[0] - 2 * MARGIN
 
 
-def _build_styles() -> Dict[str, ParagraphStyle]:
+def _build_styles() -> dict[str, ParagraphStyle]:
     return {
         "kicker": ParagraphStyle(
             "kicker", fontName="Helvetica-Bold", fontSize=9.5,
@@ -1263,7 +1271,7 @@ def _build_styles() -> Dict[str, ParagraphStyle]:
     }
 
 
-def _build_table(cells: List[List[str]], width: float, styles: Dict) -> Table:
+def _build_table(cells: list[list[str]], width: float, styles: dict) -> Table:
     styled = []
     for r, row in enumerate(cells):
         styled_row = []
@@ -1291,8 +1299,8 @@ def _build_table(cells: List[List[str]], width: float, styles: Dict) -> Table:
     return t
 
 
-def _body_to_flowables(body_md: str, styles: Dict, width: float) -> List:
-    flowables: List = []
+def _body_to_flowables(body_md: str, styles: dict, width: float) -> list:
+    flowables: list = []
     in_bullet_group = False
     in_number_group = False
 
@@ -1365,7 +1373,7 @@ def _body_to_flowables(body_md: str, styles: Dict, width: float) -> List:
     return flowables
 
 
-def _make_info_table(meta: KnowledgeMetadata, styles: Dict) -> Table:
+def _make_info_table(meta: KnowledgeMetadata, styles: dict) -> Table:
     label = ParagraphStyle(
         "info_label", parent=styles["table_cell"], fontName="Helvetica-Bold",
         textColor=NAVY,
@@ -1439,7 +1447,7 @@ def render_pdf(doc: KnowledgeDocument, out_path: Path) -> int:
         )
         canvas.restoreState()
 
-    story: List = []
+    story: list = []
     story.append(Spacer(1, 6))
     story.append(Paragraph("AETHER WIRELESS  \u00b7  KNOWLEDGE BASE", styles["kicker"]))
     story.append(Paragraph(meta.title, styles["title"]))
@@ -1474,7 +1482,7 @@ def render_pdf(doc: KnowledgeDocument, out_path: Path) -> int:
 # =============================================================================
 
 
-def _parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
+def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         prog="generate_docs.py",
         description="Generate Aether Wireless Category B knowledge base PDFs "
@@ -1500,7 +1508,7 @@ def _parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
-def _resolve_targets(args: argparse.Namespace) -> List[Tuple[str, KnowledgeMetadata]]:
+def _resolve_targets(args: argparse.Namespace) -> list[tuple[str, KnowledgeMetadata]]:
     names = list(KB)
     if args.only:
         names = sorted({
@@ -1516,7 +1524,7 @@ def _resolve_targets(args: argparse.Namespace) -> List[Tuple[str, KnowledgeMetad
     return [(name, KB[name]) for name in names]
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     args = _parse_args(argv)
     targets = _resolve_targets(args)
 
@@ -1540,7 +1548,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         pdf_path = out_dir / meta.category / f"{name}.pdf"
         try:
             body, usage = generate_body(llm, meta)
-        except Exception as exc:  # keep going; report at the end
+        except Exception as exc:  # noqa: BLE001 - keep going; report at the end
             logger.error("FAILED %s: %s", meta.doc_id, exc)
             failed += 1
             continue
