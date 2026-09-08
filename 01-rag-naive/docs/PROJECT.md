@@ -98,6 +98,8 @@ PyPDF
 
 python-dotenv
 
+Pydantic (models, validation, and configuration via `pydantic-settings`)
+
 ### AI Gateway
 
 OpenRouter
@@ -210,9 +212,13 @@ uv add faiss-cpu
 uv add numpy
 uv add openai
 uv add python-dotenv
+uv add pydantic
+uv add pydantic-settings
 ```
 
 The openai package is used as the Python client because OpenRouter exposes an OpenAI-compatible API.
+
+Shared data models, JSON persistence, and configuration use Pydantic. `pydantic-settings` loads environment variables (including `.env`) into a typed `Settings` model.
 
 ### Run
 
@@ -1317,6 +1323,8 @@ MANIFEST_PATH = "indexes/index_manifest.json"
 
 LOG_PATH = "logs/indexing.log"
 ```
+
+The implementation loads these values through a Pydantic `Settings` model (`pydantic-settings`), which reads them from environment variables and `.env`. Model fields allow environment overrides while keeping project-root-anchored path defaults.
 
 Secrets must remain in environment variables.
 
