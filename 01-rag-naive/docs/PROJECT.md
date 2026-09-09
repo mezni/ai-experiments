@@ -2,8 +2,8 @@
 
 FAISS + UV + OpenRouter + MiniMax + Pure Python
 
-Version: 2.1
-Status: MVP Design Document
+Version: 3.0
+Status: Implemented (MVP)
 
 ## 1. Overview
 
@@ -147,18 +147,18 @@ No database is required for the MVP.
 ## 4. Project Structure
 
 ```
-rag-indexer/
-
+01-rag-naive/
 ├── pyproject.toml
 ├── uv.lock
-├── .env
+├── .env.example
 ├── .gitignore
 │
 ├── data/
-│   └── raw/
-│       ├── billing_policy.pdf
-│       ├── roaming_policy.pdf
-│       └── ...
+│   ├── raw/                    # PDF documents to index (discovered recursively)
+│   │   ├── billing/payment-policy.pdf
+│   │   ├── mobile/sim-activation.pdf
+│   │   └── ...
+│   └── processed/              # reserved for future processed artifacts (gitignored)
 │
 ├── indexes/
 │   ├── faiss.index
@@ -169,6 +169,9 @@ rag-indexer/
 ├── logs/
 │   └── indexing.log
 │
+├── scripts/
+│   └── generate_sample_pdfs.py # LLM-generated Aurora Mobile sample policies → data/raw/<category>/
+│
 ├── src/
 │   └── rag/
 │       ├── __init__.py
@@ -177,7 +180,6 @@ rag-indexer/
 │       ├── clean.py
 │       ├── chunk.py
 │       ├── embed.py
-│       ├── metadata.py
 │       ├── index.py
 │       ├── state.py
 │       ├── retrieve.py
@@ -185,15 +187,23 @@ rag-indexer/
 │       └── main.py
 │
 └── tests/
+    ├── conftest.py
+    ├── pdf_factory.py
+    ├── test_config.py
+    ├── test_extract.py
     ├── test_clean.py
     ├── test_chunk.py
+    ├── test_embed.py
     ├── test_state.py
     ├── test_index.py
     ├── test_retrieve.py
-    └── test_generate.py
+    ├── test_generate.py
+    ├── test_main.py
+    ├── test_readme.py
+    └── test_sample_pdfs.py
 ```
 
-There is intentionally no processed/ directory in the MVP. Extracted text and chunks can remain in memory until they are persisted as metadata.
+Raw documents live in `data/raw/<category>/` subdirectories (produced by `scripts/generate_sample_pdfs.py`); extraction discovers them recursively and identifies each document by its relative path. There is intentionally no processed output in the MVP: extracted text and chunks remain in memory until they are persisted as index metadata. The `data/processed/` directory exists as a gitignored placeholder (kept with `.gitkeep`) for future normalized/extracted artifacts. Both `data/raw/` and `data/processed/` are gitignored because sample sources are regenerable.
 
 ## 5. Dependency Management
 
